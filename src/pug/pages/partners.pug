@@ -1,0 +1,20 @@
+extends ../layouts/main
+
+block content
+  section.section.section--top-small.section--no-bot.container
+    - locals.title = 'Unsere Partner'
+    - locals.desc = 'Wir werden Sie so schnell wie möglich zurückrufen. Unsere Manager arbeiten bereits daran'
+    include ../partials/page-heading
+    .hero.hero--small.hero--top-gap
+      .hero__content(style=`background-image:url(${require('@/images/h-partners.jpg')})`)
+    .about-features
+      .about-features__item
+        span.about-features__number 320+
+        h3.about-features__title Abgeschlossene Projekte
+      .about-features__item
+        span.about-features__number 50+
+        h3.about-features__title Zufriedener Auftraggeber
+      .about-features__item
+        span.about-features__number 257 000
+        h3.about-features__title m2 Geplante Fläche
+  include ../blocks/partners-list

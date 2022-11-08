@@ -1,0 +1,24 @@
+extends ../layouts/main
+
+block content
+  include ../modules/vars
+  section.section.section--top-small.container
+    - locals.title = 'Projekte'
+    - locals.desc = 'Wir werden Sie so schnell wie möglich zurückrufen. Unsere Manager arbeiten bereits daran'
+    include ../partials/page-heading
+    .projects 
+      nav.projects-category(aria-label="Project categories")
+        button.projects-category__item.btn.btn--empty Alle
+          span.projects-category__item-count 20
+        button.projects-category__item.btn.btn--empty Kliniken
+          span.projects-category__item-count 9
+        button.projects-category__item.btn.btn--empty Facharzt-Zentren
+          span.projects-category__item-count 12
+        button.projects-category__item.btn.btn--empty Verschiedenes
+          span.projects-category__item-count 12
+        button.projects-category__item.btn.btn--empty Wohnen im Alter
+          span.projects-category__item-count 12
+      .projects-list
+          include ../partials/project-item
+      .projects-more-btn-wrapper
+        .projects-more-btn.btn.btn--empty Mehr laden

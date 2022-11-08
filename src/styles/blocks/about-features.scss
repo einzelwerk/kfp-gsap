@@ -1,0 +1,26 @@
+.about-features {
+  background: var(--accent-color);
+  color: var(--text-on-accent);
+  display: flex;
+  justify-content: space-between;
+  padding: var(--gap);
+  border-radius: 20px;
+  margin-top: var(--gap);
+  &__item {
+    flex: 1;
+  }
+  &__number {
+    font-size: 52px;
+    margin-bottom: 16px;
+    display: block;
+  }
+  &__title {
+    font-size: 24px;
+  }
+  &__desc {
+    color:var(--gray-400);
+    font-size: 18px;
+    max-width: 300px;
+    margin-top: 100px;
+  }
+}

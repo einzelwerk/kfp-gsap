@@ -1,0 +1,60 @@
+-
+  var partners = [
+    {
+      image: require('@/images/partners/1.svg'),
+      title: 'Partner name'
+    },
+    {
+      image: require('@/images/partners/2.svg'),
+      title: 'Partner name'
+    },
+    {
+      image: require('@/images/partners/3.svg'),
+      title: 'Partner name'
+    },
+    {
+      image: require('@/images/partners/4.svg'),
+      title: 'Partner name'
+    },
+    {
+      image: require('@/images/partners/5.svg'),
+      title: 'Partner name'
+    },
+    {
+      image: require('@/images/partners/6.svg'),
+      title: 'Partner name'
+    },
+    {
+      image: require('@/images/partners/7.svg'),
+      title: 'Partner name'
+    },
+    {
+      image: require('@/images/partners/8.svg'),
+      title: 'Partner name'
+    },
+    {
+      image: require('@/images/partners/9.svg'),
+      title: 'Partner name'
+    },
+    {
+      image: require('@/images/partners/10.svg'),
+      title: 'Partner name'
+    },
+  ]
+
+section.section.container 
+  h2.partners-title Wir arbeiten bereits mit diesen Unternehmen zusammen und schätzen sie sehr
+  .partners-list(role="list")
+    each part in partners 
+      .partners-list__item(role="listitem")
+        img.partners-list__image(src=part.image alt=part.title)
+  if (link)
+    a.partners-link-more(href="#")
+      span.partners-link-more__text Zur Partnerübersicht
+      .partners-link-more__icon 
+        svg.svg-icon(width="24" height="24")
+          use(xlink:href="sprite.svg#arrow-r_sprite") 
+  else 
+    button.partners-list__btn.btn.btn--empty Mehr laden
+
+

@@ -1,0 +1,11 @@
+
+extends ../layouts/main
+
+block content
+  - locals.title = 'We help architects sculpt sound out of space, with bespoke, acoustic solutions.'
+  - locals.image = require('@/images/h-hero.jpg')
+  include ../blocks/main-hero
+  include ../blocks/page-desc
+  include ../blocks/portfolio-slider
+  include ../blocks/partners-list
+  include ../blocks/career-section

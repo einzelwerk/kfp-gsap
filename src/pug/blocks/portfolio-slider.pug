@@ -1,0 +1,20 @@
+section.section.container
+  - locals.sectionTitle = 'Unser Büro ist stolz auf diese Projekte'
+  - locals.sectionDesc = 'Wir werden Sie so schnell wie möglich zurückrufen. Unsere Manager arbeiten bereits daran'
+  include ../partials/section-heading
+  .portfolio-slider.js-portfolio-slider.swiper 
+    .swiper-wrapper 
+      each works in projects
+        article.portfolio-slider__item.swiper-slide
+          a.portfolio-slider__link(href="#" aria-label="Go to project") 
+            picture.portfolio-slider__image 
+              source(sizes="" srcset="")
+              img(src=works.image, alt="")
+          a.portfolio-slider__info(href="#" aria-label="Go to project") 
+            ul.portfolio-slider__category
+              each cat, index in works.category 
+                li.portfolio-slider__category-item= cat
+                  if works.category.length > 1 && index != works.category.length -1
+                    | !{',&nbsp;'}
+            h3.portfolio-slider__title= works.title
+    .slider-scrollbar.swiper-scrollbar

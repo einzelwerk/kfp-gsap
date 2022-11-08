@@ -1,0 +1,37 @@
+// vendor
+@use "vendor/reset";
+// utils
+@use "utils/vars";
+@use "utils/mixins";
+@use "utils/fonts";
+// modules
+@use "modules/buttons";
+@use "modules/inputs";
+@use "modules/keyframes";
+
+// layout
+@use "layout/base";
+@use "layout/text";
+@use "layout/header";
+@use "layout/footer";
+@use 'layout/section-heading';
+@use 'layout/page-heading';
+
+// pages
+
+// blocks
+@use 'blocks/main-hero';
+@use 'blocks/page-desc';
+@use 'blocks/portfolio-slider';
+@use 'blocks/slider-scrollbar';
+@use 'blocks/partners-list';
+@use 'blocks/career-section';
+@use 'blocks/projects';
+@use 'blocks/project-page';
+@use 'blocks/services-page';
+@use 'blocks/about-features';
+@use 'blocks/about-slider';
+@use 'blocks/leaders';
+@use 'blocks/about-gallery';
+@use 'blocks/career-features';
+

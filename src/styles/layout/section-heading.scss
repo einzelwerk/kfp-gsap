@@ -1,0 +1,21 @@
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 72px;
+  &--white {
+    color: var(--background);
+  }
+  &--white &__desc {
+    color: var(--background);
+  }
+  &__title {
+    font-size: 40px;
+    line-height: 120%;
+    max-width: 620px;
+  }
+  &__desc {
+    color: var(--secondary-text);
+    max-width: 440px;
+    line-height: 140%;
+  }
+}

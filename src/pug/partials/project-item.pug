@@ -1,0 +1,17 @@
+include ../modules/vars
+
+each item in locals.projects
+  article.projects-list__item(class= locals.slider ? 'swiper-slide' : null)
+    a.projects-list__link(href="/project-page.html") 
+      picture.projects-list__image 
+        source(media="(min-width: )" srcset="" sizes="")
+        img(src=item.image, alt="")
+      .projects-list__info 
+        .projects-list__meta
+          span.projects-list__categories 
+            each cat, index in item.category 
+              span.projects-list__categories-item= cat
+                if item.category.length > 1 && index != item.category.length -1
+                  | !{',&nbsp;'}
+          span.projects-list__function  Kreissal
+      h2.projects-list__title= item.title

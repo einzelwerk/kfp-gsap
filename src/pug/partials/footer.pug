@@ -1,0 +1,32 @@
+include ../modules/vars
+
+footer.footer 
+  .footer-inner.container
+    .footer__logo-section  
+      .footer__logo 
+        a.footer__logo-link(href="/") 
+          img(src=require('@/images/logo.svg'), alt="")
+      p.footer__desc Das Architekturbüro KFP entwickelt seit über 40 Jahren Bauprojekte im Gesundheitswesen.
+    .footer__info
+      .footer__info-col
+        h6.footer__heading Navigation
+        nav.footer__nav.nav
+          ul.nav-list
+            each val in menu
+              li.nav__item(class=val.hasCounter ? 'nav__item--count' : null )
+                a.nav__link(href=val.link)=val.name
+                if val.hasCounter 
+                  span.nav__count 3
+      .footer__contacts.contacts-list
+        .contacts-list__item
+          h6.contacts-list__heading Adresse
+          address.contacts-list__content Alfredstraße 155, 45131 Essen
+        .contacts-list__item
+          h6.contacts-list__heading Telefon
+          .contacts-list__content
+            a.contacts-list__link(href="tel:+49 201 84275-0") +49 201 84275-0 
+        .contacts-list__item
+          h6.contacts-list__heading E-Mail
+          .contacts-list__content
+            a.contacts-list__link(href="mailto:info@architekten-kfp.de") info@architekten-kfp.de
+        

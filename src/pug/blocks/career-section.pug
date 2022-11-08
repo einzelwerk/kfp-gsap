@@ -1,0 +1,35 @@
+section.section.section--gray.container 
+  .career-cta
+    .career-cta__heading
+      h4.career-cta__title Finden Sie den Job, den Sie suchen, bei KFP Architekten
+      a.career-cta__btn.btn.btn--secondary(href="") Karriere bei KFP
+    .career-cta__gallery.js-career-slider.swiper 
+      .swiper-wrapper.career-cta__gallery-wrapper
+        img.career-cta__image.swiper-slide(src=require('@/images/kit.jpg'), alt="")
+        img.career-cta__image.swiper-slide(src=require('@/images/house.jpg'), alt="")
+        img.career-cta__image.swiper-slide(src=require('@/images/night-house.jpg'), alt="")
+  .career-list-wrapper 
+    - locals.sectionTitle = 'Wir sind immer auf der Suche nach talentierten Menschen'
+    - locals.sectionDesc = 'Das Unternehmen nimmt seine Arbeit auf, baut seinen Kundenstamm aus und erweitert seine geografische Präsenz'
+      include ../partials/section-heading.pug
+    .career-list 
+      article.career-list__item
+        h5.career-list__title Bauzeichner (m/w/d)
+        a.career-list__link(href="")
+          span.career-list__text Stelleangebote ansehen
+          svg.svg-icon(width="16" height="16")
+            use(xlink:href="sprite.svg#arrow-diagonal_sprite")
+      article.career-list__item
+        h5.career-list__title Architekt Planung (m/w/d) (LPH 1-5)
+        a.career-list__link(href="")
+          span.career-list__text Stelleangebote ansehen
+          svg.svg-icon(width="16" height="16")
+            use(xlink:href="sprite.svg#arrow-diagonal_sprite")
+      article.career-list__item
+        h5.career-list__title Sekretärin
+        a.career-list__link(href="")
+          span.career-list__text Stelleangebote ansehen
+          svg.svg-icon(width="16" height="16")
+            use(xlink:href="sprite.svg#arrow-diagonal_sprite")
+    .career-button-wrapper 
+      a.career-more-btn.btn.btn--empty(href="") weitere Stellen

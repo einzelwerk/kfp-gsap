@@ -1,0 +1,59 @@
+extends ../layouts/main
+
+block content
+  - locals.image = require('@/images/project-single.jpg')
+  - locals.title = 'Studie / Wettbew. / Bauvoranfrage'
+  - locals.back = true
+  include ../blocks/main-hero
+  section.section.section--bot.container
+    .project-content 
+      aside.project-content__sidebar.sidebar-project 
+        .sidebar-project__heading
+          .sidebar-project__item
+            h2.sidebar-project__title Kategorie
+            p.sidebar-project__content Kliniken, Verschiedenes
+          .sidebar-project__item
+            h2.sidebar-project__title Funktion
+            p.sidebar-project__content Kreissal
+        .sidebar-project__item
+          h2.sidebar-project__title Daten & Fakten
+          p.sidebar-project__content Erweiterungsbau Geriatrie Engelskirchen Bri: 13.152 M³ | NF: 3.083 M²
+        .sidebar-project__item
+          h2.sidebar-project__title Projektbeschreibung
+          .sidebar-project__content.js-hidden-text
+            p  Im Zuge der geplanten Zusammenlegung wird der Geriatrie-Schwerpunkt in Lindlar an den Standort Engelskirchen verlagert.
+            p  Im Zuge der geplanten Zusammenlegung wird der Geriatrie-Schwerpunkt in Lindlar an den Standort Engelskirchen verlagert.
+            button.sidebar-project__more.js-show-text
+              span(data-switch-text="Less about project") Mehr lesen
+              svg.svg-icon(width="14" height="14")
+                use(xlink:href="sprite.svg#arrow-down_sprite")
+      .project-content__gallery
+        picture.project-content__item
+          source(media="(min-width: )" srcset="")
+          img(src=require("@/images/project-page/1.jpg") alt="")
+        picture.project-content__item
+          source(media="(min-width: )" srcset="")
+          img(src=require("@/images/project-page/2.jpg") alt="")
+        picture.project-content__item
+          source(media="(min-width: )" srcset="")
+          img(src=require("@/images/project-page/3.jpg") alt="")
+        picture.project-content__item
+          source(media="(min-width: )" srcset="")
+          img(src=require("@/images/project-page/4.jpg") alt="")
+        picture.project-content__item
+          source(media="(min-width: )" srcset="")
+          img(src=require("@/images/project-page/5.jpg") alt="")
+        picture.project-content__item
+          source(media="(min-width: )" srcset="")
+          img(src=require("@/images/project-page/6.jpg") alt="")
+        picture.project-content__item
+          source(media="(min-width: )" srcset="")
+          img(src=require("@/images/project-page/7.jpg") alt="")
+  section.section.section--gray.container
+    - locals.sectionTitle = 'Weitere Projekte'
+    include ../partials/section-heading
+    .other-projects.swiper
+      .swiper-wrapper 
+        - locals.slider = true;
+        include ../partials/project-item
+      .slider-scrollbar.swiper-scrollbar

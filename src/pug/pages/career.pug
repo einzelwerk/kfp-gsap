@@ -1,0 +1,50 @@
+extends ../layouts/main
+
+block content
+  section.section.section--top-small.section--no-bot.container
+    - locals.title = 'Karriere'
+    - locals.desc = 'Wir werden Sie so schnell wie möglich zurückrufen. Unsere Manager arbeiten bereits daran'
+    include ../partials/page-heading
+    .hero.hero--small.hero--top-gap
+      .hero__content(style=`background-image:url(${require('@/images/h-career.jpg')})`)
+  section.section.section--not-top.section--no-bot.career-features-section 
+    .career-features 
+      h2.career-features__title Benefits für 
+        span unsere Mitarbeiter
+      .career-features-list(role="list")
+        .career-features-list__item(role="listitem")
+          .career-features-list__image 
+            img.career-features-list__image-src(src=require('@/images/career-f/1.svg') role="presentation")
+          h3.career-features-list__title Gem. Aktivitäten-Sommerfeste
+        .career-features-list__item(role="listitem")
+          .career-features-list__image 
+            img.career-features-list__image-src(src=require('@/images/career-f/2.svg') role="presentation")
+          h3.career-features-list__title Bezahlte Fortbildungen sind selbstverständlich 
+        .career-features-list__item(role="listitem")
+          .career-features-list__image 
+            img.career-features-list__image-src(src=require('@/images/career-f/3.svg') role="presentation")
+          h3.career-features-list__title Bezahlte Überstunden one more text row
+        .career-features-list__item(role="listitem")
+          .career-features-list__image 
+            img.career-features-list__image-src(src=require('@/images/career-f/4.svg') role="presentation")
+          h3.career-features-list__title Schöne und zentrale Lage in Essen Rüttenscheid
+        .career-features-list__item(role="listitem")
+          .career-features-list__image 
+            img.career-features-list__image-src(src=require('@/images/career-f/5.svg') role="presentation")
+          h3.career-features-list__title Unterstützung bei der Aufnahme Architektenkammer
+        .career-features-list__item(role="listitem")
+          .career-features-list__image 
+            img.career-features-list__image-src(src=require('@/images/career-f/6.svg') role="presentation")
+          h3.career-features-list__title Ganze 30 Urlaubstage im Jahr
+        .career-features-list__item(role="listitem")
+          .career-features-list__image 
+            img.career-features-list__image-src(src=require('@/images/career-f/7.svg') role="presentation")
+          h3.career-features-list__title Modern ausgestattete Arbeitsplätze mit neuester Software
+        .career-features-list__item(role="listitem")
+          .career-features-list__image 
+            img.career-features-list__image-src(src=require('@/images/career-f/8.svg') role="presentation")
+          h3.career-features-list__title Stellung von Firmenfahrzeugen für berufliche Fahrten
+        .career-features-list__item(role="listitem")
+          .career-features-list__image 
+            img.career-features-list__image-src(src=require('@/images/career-f/9.svg') role="presentation")
+          h3.career-features-list__title Aufstiegschancen Zukünftiege Perspektiven

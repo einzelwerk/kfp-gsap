@@ -1,0 +1,42 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+.header {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--gray-200);
+  &__btn {
+    margin-left: auto;
+  }
+  &__nav {
+    margin-left: 40px;
+  }
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  &__item {
+    margin-right: 32px;
+    &--count {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__count {
+    border-radius: 8px;
+    background: var(--accent-color);
+    color: var(--text-on-accent);
+    padding: 5px 12px;
+    font-size: 12px;
+    display: block;
+    margin-left: 12px;
+  }
+}

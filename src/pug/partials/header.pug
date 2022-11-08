@@ -1,0 +1,17 @@
+
+include ../modules/vars
+
+header.header
+  .header-inner.container
+    .header__logo.logo
+      a.logo__link(href="/")
+        img.logo__src(src=require('@/images/logo.svg') alt="")
+    nav.header__nav.nav 
+      ul.nav-list 
+        each val in menu
+          li.nav__item(class=val.hasCounter ? 'nav__item--count' : null )
+            a.nav__link(href=val.link)=val.name
+            if val.hasCounter 
+              span.nav__count 3
+    button.header__btn.btn.btn--primary.js-open-modal 
+      span.btn__text Jetzt bewerben

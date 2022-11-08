@@ -1,0 +1,121 @@
+extends ../layouts/main
+
+block content
+  section.section.section--top-small.section--no-bot.container
+    - locals.title = 'Das sind wir'
+    - locals.desc2 = 'Wahre und wichtige Werte für unser Unternehmen - unsere Arbeitgeber. WE-ON - is created Company hat die besten russischen Experten zusammengebracht, die BIM-Technologien für den Bau von Wohnanlagen nutzen.'
+    - locals.desc = 'Ausgehend von der eigenen Erfahrung und dem Wunsch, sich ständig zu verbessern, wurden wir zu Experten für innovative Projekte in den Bereichen Design und Beratung. Durch die Anwendung der besten internationalen Praktiken und der selbst entwickelten Software, die auf der Grundlage einer Analyse der realisierten Projekte entwickelt wurde.'
+    include ../partials/page-heading
+    .hero.hero--small.hero--top-gap
+      .hero__content(style=`background-image:url(${require('@/images/about.jpg')})`)
+    .about-features
+      .about-features__item
+        span.about-features__number 40+
+        h3.about-features__title Jahre Erfahrung
+        p.about-features__desc We’ve helped build over 400 projects with great companies.
+      .about-features__item
+        span.about-features__number 320+
+        h3.about-features__title Abgeschlossene Projekte
+        p.about-features__desc We’ve helped build over 400 projects with great companies.
+      .about-features__item
+        span.about-features__number 30+
+        h3.about-features__title Mitarbeiter im Unternehmen
+        p.about-features__desc We’ve helped build over 400 projects with great companies.
+  section.section.section--top-small
+    .container
+      - locals.sectionTitle = 'Angefangen als Familienbetrieb, gewachsen zu einem coolen Unternehmen'
+      include ../partials/section-heading
+    .about-slider-wrapper 
+      .about-slider.swiper.js-about-slider
+        .swiper-wrapper 
+          .about-slider__slide.swiper-slide 2022
+          .about-slider__slide.swiper-slide 2020
+          .about-slider__slide.swiper-slide 2018
+          .about-slider__slide.swiper-slide 2018
+          .about-slider__slide.swiper-slide 2018
+          .about-slider__slide.swiper-slide(aria-hidden="true")
+          .about-slider__slide.swiper-slide(aria-hidden="true")
+
+      .about-slider-text.swiper.js-about-slider-text
+        .swiper-wrapper
+          .about-slider-text__content.swiper-slide
+            p Das Unternehmen nimmt seine Arbeit auf, baut seinen Kundenstamm aus und erweitert seine geografische Präsenz
+            p Das Unternehmen nimmt seine Arbeit auf, baut seinen Kundenstamm aus und erweitert seine geografische Präsenz
+          .about-slider-text__content.swiper-slide
+            p 2Das Unternehmen nimmt seine Arbeit auf, baut seinen Kundenstamm aus und erweitert seine geografische Präsenz
+            p 2Das Unternehmen nimmt seine Arbeit auf, baut seinen Kundenstamm aus und erweitert seine geografische Präsenz
+          .about-slider-text__content.swiper-slide
+            p 3Das Unternehmen nimmt seine Arbeit auf, baut seinen Kundenstamm aus und erweitert seine geografische Präsenz
+            p 3Das Unternehmen nimmt seine Arbeit auf, baut seinen Kundenstamm aus und erweitert seine geografische Präsenz
+          .about-slider-text__content.swiper-slide
+            p 4Das Unternehmen nimmt seine Arbeit auf, baut seinen Kundenstamm aus und erweitert seine geografische Präsenz
+            p 4Das Unternehmen nimmt seine Arbeit auf, baut seinen Kundenstamm aus und erweitert seine geografische Präsenz
+          .about-slider-text__content.swiper-slide
+            p 5Das Unternehmen nimmt seine Arbeit auf, baut seinen Kundenstamm aus und erweitert seine geografische Präsenz
+            p 5Das Unternehmen nimmt seine Arbeit auf, baut seinen Kundenstamm aus und erweitert seine geografische Präsenz
+  section.section.section--black
+    .container
+      - locals.isWhite = true
+      - locals.sectionTitle = 'Deutschlands Marktführer in Architektur und Ingenieurwesen'
+      - locals.sectionDesc = 'Das Unternehmen nimmt seine Arbeit auf, baut seinen Kundenstamm aus und erweitert seine geografische Präsenz'
+      include ../partials/section-heading
+      - locals.isWhite = false
+      .leaders
+        .leaders__item 
+          picture.leaders__photo 
+            source(media="(min-width: )" srcset="")
+            img.leaders__photo-src(src=require('@/images/lead/1.jpg'), alt="")
+          .leaders__info 
+            span.leaders__name Thorsten Kraft
+            .leaders__position Geschäftsführer, Dipl.-Ing. / Architekt
+            a.leaders__link(href="https://google.com" target="_blank")
+              | LinkedIn Account 
+              svg.svg-icon(width="16" height="16")
+                use(xlink:href="sprite.svg#arrow-diagonal_sprite") 
+        .leaders__item 
+          picture.leaders__photo 
+            source(media="(min-width: )" srcset="")
+            img.leaders__photo-src(src=require('@/images/lead/2.jpg'), alt="")
+          .leaders__info 
+            span.leaders__name Thorsten Kraft
+            .leaders__position Geschäftsführer, Dipl.-Ing. / Architekt
+            a.leaders__link(href="https://google.com" target="_blank")
+              | LinkedIn Account 
+              svg.svg-icon(width="16" height="16")
+                use(xlink:href="sprite.svg#arrow-diagonal_sprite") 
+        .leaders__item 
+          picture.leaders__photo 
+            source(media="(min-width: )" srcset="")
+            img.leaders__photo-src(src=require('@/images/lead/3.jpg'), alt="")
+          .leaders__info 
+            span.leaders__name Thorsten Kraft
+            .leaders__position Geschäftsführer, Dipl.-Ing. / Architekt
+            a.leaders__link(href="https://google.com" target="_blank")
+              | LinkedIn Account 
+              svg.svg-icon(width="16" height="16")
+                use(xlink:href="sprite.svg#arrow-diagonal_sprite")
+  section.section.container
+    - locals.sectionTitle = 'Wir sind Enthusiasten unseres Handwerks, fühlen Sie unsere Stimmung'
+    - locals.sectionDesc = false
+    include ../partials/section-heading
+    .about-gallery-wrapper.swiper.js-about-gallery
+      .swiper-wrapper.about-gallery
+        picture.about-gallery__item.swiper-slide
+          source(media="(min-width: )" srcset="")
+          img.about-gallery__item-src(src=require('@/images/about-gallery/1.jpg'), alt="")
+        picture.about-gallery__item.swiper-slide
+          source(media="(min-width: )" srcset="")
+          img.about-gallery__item-src(src=require('@/images/about-gallery/2.jpg'), alt="")
+        picture.about-gallery__item.swiper-slide
+          source(media="(min-width: )" srcset="")
+          img.about-gallery__item-src(src=require('@/images/about-gallery/3.jpg'), alt="")
+        picture.about-gallery__item.swiper-slide
+          source(media="(min-width: )" srcset="")
+          img.about-gallery__item-src(src=require('@/images/about-gallery/4.jpg'), alt="")
+        picture.about-gallery__item.swiper-slide
+          source(media="(min-width: )" srcset="")
+          img.about-gallery__item-src(src=require('@/images/about-gallery/5.jpg'), alt="")
+      .slider-scrollbar.swiper-scrollbar
+
+  include ../blocks/career-section
+

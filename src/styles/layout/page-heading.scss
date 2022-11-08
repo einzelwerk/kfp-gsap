@@ -1,0 +1,15 @@
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    font-size: 52px;
+    max-width: 1103px;
+  }
+  &__desc {
+    max-width: 440px;
+    line-height: 140%;
+    font-size: 20px;
+    color:var(--gray-700)
+  }
+}

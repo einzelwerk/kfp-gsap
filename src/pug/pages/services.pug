@@ -1,0 +1,34 @@
+extends ../layouts/main
+
+block content
+  section.section.section--top-small.section--no-bot.container
+    - locals.title = 'Wir führen die gesamte Palette der architektonischen Arbeit aus, von der Zeichnung bis zum kompletten Bau von Anlagen'
+    include ../partials/page-heading
+    .hero.hero--small.hero--top-gap
+      .hero__content(style=`background-image:url(${require('@/images/h-services.jpg')})`)
+  section.section.section--top-small.container
+    nav.services-nav
+      ul.services-nav-list 
+        li.services-nav__item.btn.btn--empty 
+          a.services-nav__link(href="#Planungsunterstützung-0") Planungsunterstützung
+        li.services-nav__item.btn.btn--empty 
+          a.services-nav__link(href="#Planungsunterstützung-1") Türlosungen planen
+        li.services-nav__item.btn.btn--empty 
+          a.services-nav__link(href="#Planungsunterstützung-2") Objektberatung
+        li.services-nav__item.btn.btn--empty 
+          a.services-nav__link(href="#Planungsunterstützung-3") Architektenservice
+        li.services-nav__item.btn.btn--empty 
+          a.services-nav__link(href="#Planungsunterstützung-4") Interior Design
+    .services-list
+      each val,index in [1,2,3,4,5]
+        .services-list__item(id=`Planungsunterstützung-${index}`)
+          .services-list__info
+            h2.services-list__title Planungsunterstützung
+            h4.services-list__title-desc Beschreibung
+            .services-list__desc 
+              p We recognise that the impact of our work on people’s lives is significant. It is this sense of responsibility that drives our approach.
+              p It is why we work in our core sectors of Sports & Leisure, Healthcare & Education and Residential & Commercial. Because these developments are at the heart of what forms sustainable communities.
+              p Our designs are where people gather and choose to further enhance. By providing communities with the right environments, we can spark inspiration for creativity and change - reinforcing the self-sustaining environment.
+          picture.services-list__image
+            source(media="(min-width: )" srcset="")
+            img.services-list__image-src(src=require('@/images/services/1.jpg'), alt="")
