@@ -5,6 +5,16 @@
   background: var(--accent-color);
   color: var(--text-on-accent);
   border-radius: 20px;
+  .slider-scrollbar {
+    display: none;
+    @include media(md) {
+      display: block;
+      margin-top: 16px;
+    }
+    .swiper-scrollbar-drag {
+      background-color: var(--background);
+    }
+  }
   &__heading {
     display: flex;
     justify-content: space-between;
@@ -36,6 +46,31 @@
   }
 }
 
+.career-students {
+  .slider-scrollbar {
+    display: none;
+    @include media(md) {
+      display: block;
+      margin-top: 16px;
+    }
+  }
+}
+
+.career-students-slider-wrapper {
+  @include media(md, min-width) {
+    display: grid !important;
+    gap: 30px;
+    grid-template-columns: 25% 30% 1fr;
+  }
+}
+
+body .career-students-slider__image {
+  height: 300px;
+  border-radius: 20px;
+  width: 100%;
+  object-fit: cover;
+}
+
 .career-list-wrapper {
   margin-top: 80px;
 }
@@ -62,7 +97,7 @@
     align-self: flex-start;
     &:hover {
       .svg-icon {
-        transform:translate(3px, -3px);
+        transform: translate(3px, -3px);
       }
     }
   }

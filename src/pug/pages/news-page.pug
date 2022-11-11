@@ -1,0 +1,61 @@
+
+extends ../layouts/main
+
+block content
+  article.container
+    .news-heading
+      .news-heading__text 
+        time.news-heading__date(datetime="2022-08-26 19:00") 26.08.2022
+        h1.news-heading__title Empathy in Design: How and Why Everything Looks So Friendly Now
+        p.news-heading__desc Faced with seemingly impassable obstacles, we find solace in rote positivity. Living in, generously speaking, tumultuous times, we look for hope where ever we can get it. In response to this, brands have become friendly.
+      picture.news-heading__image 
+        source(media="(min-width: )" srcset="")
+        img(src=require('@/images/news.jpg'), alt="")
+    .news-content.editor-content
+      section
+        h2 Everyone Says "Hi"
+        p The big shift in design is in moving the focus from the products onto the people who are going to be using them. Especially now, since we’re moving more and more into the digital spaces, we simply want these spaces to be pleasant to be in. This primarily results in softer color schemes, serif typefaces, cute illustrations. 
+        p These days, we’re getting up close and personal (in a good way). It’s not just the visuals. In the following examples, note the tone of voice: it’s a lot warmer than anything from a decade ago.
+      section
+        h3 Inclusive and Accessible Design
+        p The whole trend isn’t just pretty colors and adorable drawings. It’s a massive shift of the focus in design. It’s now unquestionable and self-evident that digital spaces have to be inclusive and welcoming to everyone. Up until a few years ago the web designers didn’t even check whether a website is readable for the colorblind, which is, luckily, no longer the case. Websites are properly structured to be accessible for screen readers, websites are optimized and so can be viewed in the areas that still have poor internet connection. Web is now for everyone, all due to empathy.
+        p It would take quite some time to go through every stage of computing evolution, so let’s get to the fun part. To the digital revolution. The 1980s marked a ubiquitous transformation from analog tech to digital. These are the interfaces that already existed (out of those that are between people and machines):
+      section
+        h4 Double digitalization
+        p The latest fund, the Subversive Metaverse ETF (PUNK) launched in January, focuses on companies both in the U.S. and overseas, and comes with an expense ratio of 75 bps. The actively managed fund looks for companies that have exposure to any of the seven layers of the metaverse: experience, discovery, creator economy, spatial computing, decentralization, human interface and infrastructure.
+        ol
+          li Lectus id duis vitae porttitor enim gravida morbi.
+          li Eu turpis posuere semper feugiat volutpat elit, ultrices suspendisse. Auctor vel in vitae placerat.
+          li Suspendisse maecenas ac donec scelerisque diam sed est duis purus.
+        p Discovery, creator economy, spatial computing, decentralization, human interface and infrastructure.
+        ul
+          li Lectus id duis vitae porttitor enim gravida morbi.
+          li Eu turpis posuere semper feugiat volutpat elit, ultrices suspendisse. Auctor vel in vitae placerat.
+          li Suspendisse maecenas ac donec scelerisque diam sed est duis purus.
+      figure.editor-picture
+        img(src=require('@/images/news-1.jpg'), alt="")
+        figcaption Note the typefaces on the 60s covers, which are now often evoked via 
+          a(href="#" target="_blank" rel="nofollow noopener") Deposit Photos 
+      figure.editor-blockquote
+        blockquote “In a world older and more complete than ours they move finished and complete, gifted with extensions of the senses we have lost or never attained, living by voices we shall never hear.”
+        figcaption — Olivia Rhye, Product Designer
+      section
+        h2 It Takes Strength to Be Gentle and Kind
+        p Designers aren’t politicians to give empty platitudes on remaining hopeful in the darkest times, et cetera. But designers do have a responsibility: a good design is something more than just functional and pleasant on the eyes. A designer should keep in mind not only the final user, but the audience at large. Good design is honest and empathetic.
+        p While this slice of album covers is hardly representative of the overall 20th century design, it’s specifically the area that is, by default, more focused on emotions. Which is a lot closer to our situation today than any example of a 70s ad for some kitchen appliance.
+      section
+        h2 Now, Now
+        p The introduction of the web was somewhat of a reset button. A whole new design space. Starting with stumbles, in both due to its novelty, and the technical limitations at the time, it settled down into something digestible soon enough. Here is a brash generalization: until about 2015, web design was focused on technology, and then the need for personal approach arrived. See where we’re going with this?
+      figure.editor-picture
+        img(src=require('@/images/news-1.jpg'), alt="")
+        figcaption Note the typefaces on the 60s covers, which are now often evoked via 
+          a(href="#" target="_blank" rel="nofollow noopener") Deposit Photos 
+  section.section.section--gray.container
+    - locals.sectionTitle = 'Das könnte Sie auch interessieren'
+    include ../partials/section-heading
+    .news-slider.swiper.js-news-slider 
+      .swiper-wrapper
+        - locals.slider = true
+        each val in [1,2,3,4,5,6,7,8,9,10,11]
+          include ../blocks/news-item
+      .slider-scrollbar

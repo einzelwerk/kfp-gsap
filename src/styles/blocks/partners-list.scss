@@ -37,23 +37,21 @@
   transition: 0.4s;
   border: 1px solid transparent;
   &:hover {
-    --accent-color: var(--gray-0);
-    --text-on-accent: var(--gray-900);
-    --background: var(--gray-900);
-    border: 1px solid var(--gray-900);
+    .btn__inner {
+      &:first-child {
+        transform: translateY(-100%);
+      }
+      &:last-child {
+        transform: translateY(0%);
+      }
+    }
   }
   &__text {
     font-size: 24px;
     line-height: 130%;
   }
   &__icon {
-    padding: 12px 20px;
-    border-radius: 1000px;
+    border: 2px solid var(--background);
     color: var(--accent-color);
-    background: var(--background);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.4s;
   }
 }

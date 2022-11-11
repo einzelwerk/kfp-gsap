@@ -11,6 +11,10 @@
   &--small {
     padding-bottom: calc(640px / 1360px * 100%);
   }
+  &--tiny {
+    padding-bottom: calc(500px / 1360px * 100%);
+
+  }
   &--top-gap {
     margin-top: 64px;
   }

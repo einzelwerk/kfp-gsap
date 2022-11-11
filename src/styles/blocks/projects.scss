@@ -3,33 +3,6 @@
 
 }
 
-.projects-category {
-  margin-bottom: 60px;
-  display: flex;
-  &__item {
-    display: flex;
-    align-items: center;
-    margin-right: 12px;
-    padding: 17px 32px;
-    font-size: 18px;
-    cursor: pointer;
-    &:last-child {
-      margin: 0;
-    }
-  }
-  &__item-count {
-    width: 28px;
-    height: 28px;
-    background: var(--gray-100);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gray-500);
-    margin-left: 8px;
-    border-radius: 50%;
-    font-size: 14px;
-  }
-}
 
 .projects-list {
   display: grid;
@@ -72,11 +45,3 @@
   }
 }
 
-.projects-more-btn-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.projects-more-btn {
-  margin-top: 80px;
-}

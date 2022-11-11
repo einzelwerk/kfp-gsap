@@ -1,0 +1,12 @@
+extends ../layouts/main
+
+block content
+  section.container 
+    .hero-secondary
+      .hero-secondary__text
+        h1.hero-secondary__title Danke! Wir haben Ihre Nachricht erhalten.
+        p.hero-secondary__desc Wir werden Sie so schnell wie möglich zurückrufen. Unsere Manager arbeiten bereits daran
+        a.hero-secondary__btn.btn.btn--primary(href="/")  Zur Startseite
+      picture.hero-secondary__image
+        source(media="(min-width: )" srcset="")
+        img(src=require('@/images/thank.jpg'), alt="")

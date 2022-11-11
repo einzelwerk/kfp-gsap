@@ -1,0 +1,20 @@
+extends ../layouts/main
+
+block content
+  section.section.section--top-small.section--bot-small.container
+    - locals.title = 'Unsere Geschichten und Longreads'
+    - locals.desc = 'Wir werden Sie so schnell wie möglich zurückrufen. Unsere Manager arbeiten bereits daran'
+    include ../partials/page-heading
+  section.section.section--no-top.container 
+    nav.category(aria-label="Project categories")
+      button.category__item.btn.btn--empty All
+        span.category__item-count 20
+      button.category__item.btn.btn--empty Mass Media
+        span.category__item-count 9
+      button.category__item.btn.btn--empty Company
+        span.category__item-count 12
+    .news-grid
+      each val in [1,2,3,4,5,6,7,8,9,10,11]
+        include ../blocks/news-item
+    .load-more-btn-wrapper
+      button.load-more-btn.btn.btn--empty Mehr laden

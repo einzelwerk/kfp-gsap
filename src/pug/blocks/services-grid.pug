@@ -1,0 +1,53 @@
+section.section.section--black
+  - locals.sectionTitle = 'Unsere Leistungen'
+  - locals.sectionDesc = 'Wir wachsen stetig weiter und suchen eine Verstärkung für unser Architekturbüro.'
+  - locals.isWhite = true
+  .container
+    include ../partials/section-heading
+    - locals.isWhite = false
+    .services-grid
+      article.services-grid__item
+        a.services-grid__inner(href="#")
+          .services-grid__image 
+            img.services-grid__image-src(src=require('@/images/services-grid/1.svg') alt="")
+          .services-grid__info 
+            h2.services-grid__title Analyse
+            .services-grid__link(href="#") Learn more
+              svg.svg-icon(width="16" height="16")
+                use(xlink:href="sprite.svg#arrow-diagonal_sprite")
+      article.services-grid__item
+        a.services-grid__inner(href="#")
+          .services-grid__image 
+            img.services-grid__image-src(src=require('@/images/services-grid/2.svg') alt="")
+          .services-grid__info 
+            h2.services-grid__title Analyse
+            .services-grid__link(href="#") Learn more
+              svg.svg-icon(width="16" height="16")
+                use(xlink:href="sprite.svg#arrow-diagonal_sprite")
+      article.services-grid__item
+        a.services-grid__inner(href="#")
+          .services-grid__image 
+            img.services-grid__image-src(src=require('@/images/services-grid/3.svg') alt="")
+          .services-grid__info 
+            h2.services-grid__title Analyse
+            .services-grid__link(href="#") Learn more
+              svg.svg-icon(width="16" height="16")
+                use(xlink:href="sprite.svg#arrow-diagonal_sprite")
+      article.services-grid__item
+        a.services-grid__inner(href="#")
+          .services-grid__image 
+            img.services-grid__image-src(src=require('@/images/services-grid/4.svg') alt="")
+          .services-grid__info 
+            h2.services-grid__title Analyse
+            .services-grid__link(href="#") Learn more
+              svg.svg-icon(width="16" height="16")
+                use(xlink:href="sprite.svg#arrow-diagonal_sprite")
+      article.services-grid__item
+        a.services-grid__inner(href="#")
+          .services-grid__image 
+            img.services-grid__image-src(src=require('@/images/services-grid/5.svg') alt="")
+          .services-grid__info 
+            h2.services-grid__title Analyse
+            .services-grid__link(href="#") Learn more
+              svg.svg-icon(width="16" height="16")
+                use(xlink:href="sprite.svg#arrow-diagonal_sprite")

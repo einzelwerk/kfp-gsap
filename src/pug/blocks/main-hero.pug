@@ -1,8 +1,8 @@
 section.hero-section.container
-  .hero
+  .hero( class=cClass ? cClass : null)
     .hero__content(style=`background-image: url(${image})`)
       if locals.back
         a.hero__back-btn(href="/") 
-          svg.svg-icon(width="32", height="32")
+          svg.svg-icon(width="32" height="32")
             use(xlink:href="sprite.svg#arrow-l_sprite")
       h1.hero__title= title

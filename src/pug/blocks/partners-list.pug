@@ -51,9 +51,8 @@ section.section.container
   if (link)
     a.partners-link-more(href="#")
       span.partners-link-more__text Zur Partnerübersicht
-      .partners-link-more__icon 
-        svg.svg-icon(width="24" height="24")
-          use(xlink:href="sprite.svg#arrow-r_sprite") 
+      - locals.cClass = 'partners-link-more__icon'
+      include ../blocks/arrow-btn
   else 
     button.partners-list__btn.btn.btn--empty Mehr laden
 

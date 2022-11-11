@@ -1,0 +1,29 @@
+section.section.container
+  - locals.sectionTitle = 'Wir sind Enthusiasten unseres Handwerks, fühlen Sie unsere Stimmung'
+  - locals.sectionDesc = false
+  include ../partials/section-heading
+  .about-gallery-wrapper.swiper.js-about-gallery
+    .swiper-wrapper.about-gallery
+      picture.about-gallery__item.swiper-slide
+        source(media="(min-width: )" srcset="")
+        img.about-gallery__item-src(src=require('@/images/about-gallery/1.jpg'), alt="")
+      picture.about-gallery__item.swiper-slide
+        source(media="(min-width: )" srcset="")
+        img.about-gallery__item-src(src=require('@/images/about-gallery/2.jpg'), alt="")
+      picture.about-gallery__item.swiper-slide
+        source(media="(min-width: )" srcset="")
+        img.about-gallery__item-src(src=require('@/images/about-gallery/3.jpg'), alt="")
+      picture.about-gallery__item.swiper-slide
+        source(media="(min-width: )" srcset="")
+        img.about-gallery__item-src(src=require('@/images/about-gallery/4.jpg'), alt="")
+      picture.about-gallery__item.swiper-slide
+        source(media="(min-width: )" srcset="")
+        img.about-gallery__item-src(src=require('@/images/about-gallery/5.jpg'), alt="")
+      if (more)
+        picture.about-gallery__item.swiper-slide
+          source(media="(min-width: )" srcset="")
+          img.about-gallery__item-src(src=require('@/images/about-gallery/5.jpg'), alt="")
+        picture.about-gallery__item.swiper-slide
+          source(media="(min-width: )" srcset="")
+          img.about-gallery__item-src(src=require('@/images/about-gallery/5.jpg'), alt="")
+    .slider-scrollbar.swiper-scrollbar

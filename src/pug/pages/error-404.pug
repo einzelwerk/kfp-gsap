@@ -1,0 +1,12 @@
+extends ../layouts/main
+
+block content
+  section.container 
+    .hero-secondary
+      .hero-secondary__text
+        h1.hero-secondary__title Ups... Sie sind auf der falschen Seite gelandet
+        p.hero-secondary__desc Der Link, dem Sie gefolgt sind, führt nirgendwo hin. Möglicherweise liegt ein Tippfehler vor oder die Seite wurde gelöscht.
+        a.hero-secondary__btn.btn.btn--primary(href="/")  Zur Startseite
+      picture.hero-secondary__image
+        source(media="(min-width: )" srcset="")
+        img(src=require('@/images/404.jpg'), alt="")

@@ -1,0 +1,58 @@
+.career-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
+  &__item {
+    height: 0;
+    position: relative;
+    padding-bottom: calc(320px / 675px * 100%);
+    overflow: hidden;
+    clip-path: inset(0 0 0 0 round 20px);
+    transition: clip-path 0.46s cubic-bezier(0.65, 0, 0.35, 1);
+    &:hover {
+      clip-path: inset(1.2vw 1.2vw 1.2vw 1.2vw round 30px);
+      .career-cards__title {
+        transform: translate(1.2vw, -1.2vw);
+      }
+      .career-cards__btn {
+        transform: translate(-1.2vw, -1.2vw);
+        .btn__inner {
+          &:first-child {
+            transform: translateY(-100%);
+          }
+          &:last-child {
+            transform: translateY(0%);
+          }
+        }
+      }
+    }
+  }
+  &__inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &:focus {
+      outline: 2px solid green;
+    }
+  }
+  &__title {
+    position: absolute;
+    left: var(--gap);
+    bottom: var(--gap);
+    transition: 0.5s;
+    font-size: 32px;
+    color: var(--background);
+    line-height: 130%;
+  }
+
+  &__btn {
+    position: absolute;
+    right: var(--gap);
+    bottom: var(--gap);
+    transition: 0.5s;
+  }
+}

@@ -30,6 +30,9 @@
     &:nth-child(n + 3) {
       height: 420px;
     }
+    &:nth-child(n + 6) {
+      height: 480px;
+    }
   }
   &__item-src {
     width: 100%;

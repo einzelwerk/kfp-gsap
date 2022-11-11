@@ -47,8 +47,13 @@ function sliders() {
   const careerSlider = document.querySelector('.js-career-slider');
   if (careerSlider) {
     const careerSliderInstance = new Swiper(careerSlider, {
+      modules: [Scrollbar],
       slidesPerView: 1,
       init: false,
+      scrollbar: {
+        el: careerSlider.querySelector('.slider-scrollbar'),
+        draggable: true,
+      },
     });
     if (window.matchMedia(breakpoints.isMobile).matches) {
       careerSliderInstance.init();
@@ -91,7 +96,42 @@ function sliders() {
     });
     if (window.matchMedia(breakpoints.isMobile).matches) {
       aboutGalleryInstance.init();
-    } 
+    }
+  }
+
+  const reviewsSlider = document.querySelector('.js-reviews-slider');
+  if (reviewsSlider) {
+    new Swiper(reviewsSlider, {
+      modules: [Scrollbar],
+      slidesPerView: 1,
+      scrollbar: {
+        el: reviewsSlider.querySelector('.slider-scrollbar'),
+        draggable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 90,
+        },
+      },
+    });
+  }
+  const newsSlider = document.querySelector('.js-news-slider');
+  if (newsSlider) {
+    new Swiper(newsSlider, {
+      modules: [Scrollbar],
+      slidesPerView: 1,
+      scrollbar: {
+        el: newsSlider.querySelector('.slider-scrollbar'),
+        draggable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+    });
   }
 }
 

@@ -48,3 +48,97 @@ block content
           .career-features-list__image 
             img.career-features-list__image-src(src=require('@/images/career-f/9.svg') role="presentation")
           h3.career-features-list__title Aufstiegschancen Zukünftiege Perspektiven
+  - locals.more = true;
+  include ../blocks/about-gallery
+  section.section.section--gray.container 
+    - locals.sectionTitle = 'Wir sind immer auf der Suche nach talentierten Menschen'
+    - locals.sectionDesc = 'Das Unternehmen nimmt seine Arbeit auf, baut seinen Kundenstamm aus und erweitert seine geografische Präsenz'
+    include ../partials/section-heading
+    .career-cards
+      article.career-cards__item  
+        a.career-cards__inner(href="#" tabindex="0" style=`background-image:url(${require('@/images/career-cards/1.jpg')})`)
+          h4.career-cards__title Bauzeichner (M/W/D)
+          - locals.cClass = 'career-cards__btn'
+          include ../blocks/arrow-btn
+      article.career-cards__item
+        a.career-cards__inner(href="#" tabindex="0" style=`background-image:url(${require('@/images/career-cards/2.jpg')})`)  
+          h4.career-cards__title Bauzeichner (M/W/D)
+          include ../blocks/arrow-btn
+      article.career-cards__item
+        a.career-cards__inner(href="#" tabindex="0" style=`background-image:url(${require('@/images/career-cards/3.jpg')})`)  
+          h4.career-cards__title Bauzeichner (M/W/D)
+          include ../blocks/arrow-btn
+      article.career-cards__item  
+        a.career-cards__inner(href="#" tabindex="0" style=`background-image:url(${require('@/images/career-cards/3.jpg')})`)
+          h4.career-cards__title Bauzeichner (M/W/D)
+          include ../blocks/arrow-btn
+  section.section.container 
+    - locals.sectionTitle = 'Das sagen unsere Mitarbeiter'
+    - locals.sectionDesc = false
+    include ../partials/section-heading
+    .reviews.swiper.js-reviews-slider 
+      .swiper-wrapper 
+        .reviews__item.swiper-slide
+          .reviews__quote «Serviceorientiert – Kümmernd dem MA ggü., es ist zwar nicht immer alles machbar, es wird aber immer nach dem Wohlergehen gefragt.»
+          .reviews__author Thomas
+        .reviews__item.swiper-slide
+          .reviews__quote «Serviceorientiert – Kümmernd dem MA ggü., es ist zwar nicht immer alles machbar, es wird aber immer nach dem Wohlergehen gefragt.»
+          .reviews__author Thomas
+        .reviews__item.swiper-slide
+          .reviews__quote «Serviceorientiert – Kümmernd dem MA ggü., es ist zwar nicht immer alles machbar, es wird aber immer nach dem Wohlergehen gefragt.»
+          .reviews__author Thomas
+        .reviews__item.swiper-slide
+          .reviews__quote «Serviceorientiert – Kümmernd dem MA ggü., es ist zwar nicht immer alles machbar, es wird aber immer nach dem Wohlergehen gefragt.»
+          .reviews__author Thomas
+      .slider-scrollbar
+  section.section.section--gray.container 
+    .career-students 
+      - locals.sectionTitle = 'Angebote für Studierende & Absolventen'
+      - locals.sectionDesc = 'wir helfen Euch beim Einstieg im Berufsleben Fuß zu fassen'
+      include ../partials/section-heading
+      .career-students-slider.js-career-slider.swiper 
+        .swiper-wrapper.career-students-slider-wrapper
+          img.career-students-slider__image.swiper-slide(src=require('@/images/students/1.jpg'), alt="")
+          img.career-students-slider__image.swiper-slide(src=require('@/images/students/2.jpg'), alt="")
+          img.career-students-slider__image.swiper-slide(src=require('@/images/students/3.jpg'), alt="")
+        .slider-scrollbar
+
+  section.section.container 
+    .career-proposal
+      .career-proposal__form-col 
+        h4.career-proposal__title Jetzt Teil des Teams werden
+        form.career-proposal__form(action="?" )
+          fieldset.career-proposal__grid-field 
+            span.career-proposal__item
+              label.career-proposal__label
+                input.career-proposal__input(type="text" placeholder="Name") 
+            span.career-proposal__item
+              label.career-proposal__label
+                input.career-proposal__input.career-proposal__input--valid-error(type="tel" placeholder="Telefon") 
+            span.career-proposal__item
+              label.career-proposal__label
+                input.career-proposal__input(type="text" placeholder="Position") 
+            span.career-proposal__item
+              label.career-proposal__label
+                input.career-proposal__file.js-attached-files(type="file" multiple)
+                span.career-proposal__file-placeholder 
+                  .career-proposal__file-placeholder-text  CV hochladen
+                  svg.career-proposal__clip-icon(width="18" height="18")
+                    use(xlink:href="sprite.svg#clip_sprite")
+              span.attached-files-area 
+                span.attached-files 
+            span.career-proposal__item
+              label.career-proposal__label
+                input.career-proposal__input(type="text" placeholder="LinkedIn") 
+            span.career-proposal__item
+              label.career-proposal__label
+                input.career-proposal__input(type="text" placeholder="Nachricht") 
+          span.career-proposal__item.career-proposal__item--checkbox
+            label.career-proposal__label
+              input.career-proposal__checkbox(type="checkbox")
+              span.career-proposal__checkbox-text Hiermit akzeptiere ich die 
+                a.career-proposal__link(href="#") Datenschutzbedingungen 
+          button.career-proposal__submit.btn.btn--primary Absenden
+      picture.career-proposal__image
+        source(media="(min-width: )" srcset="")
+        img.career-proposal__image-src(src=require('@/images/career-cta.jpg'), alt="")
