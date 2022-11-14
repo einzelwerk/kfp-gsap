@@ -10,17 +10,22 @@ html(lang="de")
     meta(http-equiv='X-UA-Compatible' content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no")
   body(class= page=='home' ? 'home' : '')
+    //- ТОлько на главной
+    .preloader
+      .preloader__logo.logo
+        img.logo__src(src=require('@/images/logo-white.svg') alt="")
+    .custom-cursor(aria-hidden="true")
+        span.custom-cursor__inner Ziehen
+    #smooth-wrapper
+      #smooth-content
+
+        include ../partials/header
+
+        main.main
+          block content
 
 
-    .wrapper
 
-      include ../partials/header
-
-      main.main
-        block content
-
-
-
-      include ../partials/footer
+        include ../partials/footer
 
 

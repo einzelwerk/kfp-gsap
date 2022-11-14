@@ -1,5 +1,5 @@
-export const next = function(elem, selector) {
-  var nextElem = elem.nextElementSibling;
+export function next(elem, selector) {
+  const nextElem = elem.nextElementSibling;
 
   if (!selector) {
     return nextElem;
@@ -10,9 +10,9 @@ export const next = function(elem, selector) {
   }
 
   return null;
-};
-export const prev = function(elem, selector) {
-  var prevElem = elem.previousElementSibling;
+}
+export function prev(elem, selector) {
+  const prevElem = elem.previousElementSibling;
 
   if (!selector) {
     return prevElem;
@@ -23,4 +23,4 @@ export const prev = function(elem, selector) {
   }
 
   return null;
-};
+}

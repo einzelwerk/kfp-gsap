@@ -10,7 +10,9 @@ header.header
       ul.nav-list 
         each val in menu
           li.nav__item(class=val.hasCounter ? 'nav__item--count' : null )
-            a.nav__link(href=val.link)=val.name
+            a.nav__link(href=val.link)
+              span=val.name
+              span(aria-hidden="true")=val.name
             if val.hasCounter 
               span.nav__count 3
     a.header__btn.btn.btn--primary.js-open-modal(href="#")

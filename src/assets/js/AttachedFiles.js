@@ -11,7 +11,7 @@ const dt = new DataTransfer();
 const attachedArea = document.querySelector('.attached-files-area');
 const placeHolderText = document.querySelector('.career-proposal__file-placeholder-text');
 const placeHolderTextVal = document.querySelector('.career-proposal__file-placeholder-text')
-  .innerText;
+  ?.innerText;
 
 function updateForm(dt) {
   if (dt.files.length > 0) {
@@ -26,7 +26,7 @@ function updateForm(dt) {
     elem.addEventListener('keydown', e => {
       if (e.key === ' ') {
         removeFile(dt, elem);
-        e.preventDefault()
+        e.preventDefault();
       }
     });
   });
@@ -58,7 +58,6 @@ function removeFile(dt, elem) {
   for (let i = 0; i < dt.items.length; i++) {
     if (name === dt.items[i].getAsFile().name) {
       dt.items.remove(i);
-      continue;
     }
   }
   file.files = dt.files;
@@ -66,4 +65,4 @@ function removeFile(dt, elem) {
   updateForm(dt);
 }
 
-file.addEventListener('change', e => addFiles(e));
+file?.addEventListener('change', e => addFiles(e));

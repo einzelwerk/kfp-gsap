@@ -25,6 +25,9 @@
 .nav {
   &__item {
     margin-right: 32px;
+    @include media(xl) {
+      margin-right: 1rem;
+    }
     &--count {
       display: flex;
       align-items: center;
@@ -38,6 +41,31 @@
     font-size: 12px;
     display: block;
     margin-left: 12px;
+  }
+  &__link {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    &:hover {
+      span {
+        transform: translateY(-100%);
+        &:last-child {
+          transform: translateY(0%);
+        }
+      }
+    }
+    span {
+      display: block;
+      transition: 0.5s;
+      white-space: nowrap;
+      &:last-child {
+        position: absolute;
+        transform: translateY(100%);
+        left: 0;
+        top: 0;
+        font-style: italic;
+      }
+    }
   }
 }
 

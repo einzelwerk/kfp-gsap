@@ -1,4 +1,8 @@
 .portfolio-slider {
+  cursor: none;
+  * {
+    cursor: none;
+  }
   &__image {
     height: 0;
     position: relative;
@@ -28,7 +32,7 @@
   }
   &__category-item {
     display: inline-block;
-    opacity: .5; // shame...
+    opacity: 0.5; // shame...
     font-size: 24px;
   }
 }

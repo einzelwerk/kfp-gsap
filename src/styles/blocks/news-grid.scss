@@ -1,8 +1,12 @@
+@use "../utils/mixins" as *;
+
 .news-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 30px 48px;
-
+  @include media(xl) {
+    gap: 30px 38px;
+  }
   .news-item {
     &:nth-child(1),
     &:nth-child(2) {
@@ -51,9 +55,15 @@
     color: var(--gray-400);
     font-size: 20px;
     margin-right: 60px;
+    @include media(xl) {
+      margin-right: 1rem;
+    }
   }
   &__title {
     font-size: 24px;
     line-height: 130%;
+    @include media(xl) {
+      font-size: 20px;
+    }
   }
 }
