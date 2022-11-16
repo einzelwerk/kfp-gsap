@@ -3,7 +3,7 @@
 </symbol><symbol viewBox="0 0 10 7" fill="none" id="arrow-down_sprite">
 <path d="M9.375 1.25L5 5.625L0.625 1.25" stroke="#0F0F10" stroke-linecap="round" stroke-linejoin="round" />
 </symbol><symbol viewBox="0 0 32 32" fill="none" id="arrow-l_sprite">
-<path d="M20 26L10 16L20 6" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M20 26L10 16L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 </symbol><symbol viewBox="0 0 10 18" fill="none" id="arrow-r_sprite">
   <path d="M1 16.5L8.5 9L1 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 </symbol><symbol viewBox="0 0 18 20" fill="none" id="clip_sprite">
