@@ -11,9 +11,9 @@ html(lang="de")
     meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no")
   body(class= page=='home' ? 'home' : '')
     //- ТОлько на главной
-    //- .preloader
-    //-   .preloader__logo.logo
-    //-     img.logo__src(src=require('@/images/logo-white.svg') alt="")
+    .preloader
+      .preloader__logo.logo
+        img.logo__src(src=require('@/images/logo-white.svg') alt="")
     .custom-cursor(aria-hidden="true")
         span.custom-cursor__inner Ziehen
     #smooth-wrapper
