@@ -1,3 +1,5 @@
+@use '../utils/mixins' as *;
+
 .load-more-btn-wrapper {
   display: flex;
   justify-content: center;
@@ -5,4 +7,9 @@
 
 .load-more-btn {
   margin-top: 80px;
+  @include media(md) {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+  }
 }

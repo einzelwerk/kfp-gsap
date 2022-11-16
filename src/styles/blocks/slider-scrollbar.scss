@@ -1,9 +1,14 @@
+@use '../utils/mixins' as *;
+
 .slider-scrollbar {
   margin-top: 72px;
   position: static;
   height: 4px;
   background: var(--gray-300);
   width: 100%;
+  @include media(md) {
+    margin-top: 40px;
+  }
   .swiper-scrollbar-drag {
     border-radius: 1000px;
     background: var(--accent-color);

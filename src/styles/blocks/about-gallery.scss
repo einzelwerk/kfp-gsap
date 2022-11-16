@@ -12,6 +12,9 @@
     border-radius: 20px;
     overflow: hidden;
     grid-column: span 5;
+    @include media(md) {
+      height: 260px !important;
+    }
     &:nth-child(1) {
       grid-column: span 4;
     }

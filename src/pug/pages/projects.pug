@@ -8,17 +8,23 @@ block content
     include ../partials/page-heading
     .projects 
       nav.category(aria-label="Project categories")
-        button.category__item.btn.btn--empty Alle
+        button.category__item.btn.btn--empty
+          span.btn__text Alle
           span.category__item-count 20
-        button.category__item.btn.btn--empty Kliniken
+        button.category__item.btn.btn--empty
+          span.btn__text Kliniken
           span.category__item-count 9
-        button.category__item.btn.btn--empty Facharzt-Zentren
+        button.category__item.btn.btn--empty
+          span.btn__text Facharzt-Zentren
           span.category__item-count 12
-        button.category__item.btn.btn--empty Verschiedenes
+        button.category__item.btn.btn--empty
+          span.btn__text Verschiedenes
           span.category__item-count 12
-        button.category__item.btn.btn--empty Wohnen im Alter
+        button.category__item.btn.btn--empty 
+          span.btn__textWohnen im Alter
           span.category__item-count 12
       .projects-list
-          include ../partials/project-item
+        include ../partials/project-item
       .load-more-btn-wrapper
-        button.load-more-btn.btn.btn--empty Mehr laden
+        button.load-more-btn.btn.btn--empty 
+          span.btn__text  Mehr laden

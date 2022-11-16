@@ -3,13 +3,13 @@ import CustomEase from 'gsap/CustomEase';
 import SplitText from 'gsap/SplitText';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(SplitText, ScrollTrigger);
-
-const SplitHeroTitle = new SplitText('.hero__title', {
+const globalGap = getComputedStyle(document.body).getPropertyValue('--color-font-general');
+const textSplit = new SplitText('.hero__title', {
   type: 'chars, lines',
   charsClass: 'oh',
   linesClass: 'oh',
 });
-const {chars} = SplitHeroTitle;
+const {chars} = textSplit;
 function instaAnim() {
   const tl = gsap.timeline({
     scrollTrigger: {
@@ -80,25 +80,71 @@ function onLoadAnim() {
   });
 }
 
+const sidebarHeight = document.querySelector('.project-content__sidebar')?.getBoundingClientRect()
+  .height;
 function servicesSticky() {
+  const contentHeight = document.querySelector('.project-content__gallery')?.offsetHeight;
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: '.project-content__sidebar ',
-      start: 'top top',
+      start: '5% 5%',
       pin: true,
-      end: `+=${
-        document.querySelector('.project-content__gallery')?.getBoundingClientRect().height
-      } center`,
-
+      end: `+=${contentHeight - sidebarHeight}`,
       scrub: true,
     },
   });
 }
 
+function chronology() {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.about-slider-wrapper',
+      start: 'top center',
+      end: 'center center',
+    },
+  });
+  tl.to('.about-slider-line__active-line', {
+    ease: CustomEase.create('cubic', '0.96, 0.02, 0.34, 0.99'),
+    width: document.querySelector('.about-slider__slide')?.offsetWidth - globalGap,
+  });
+}
+
 function animAfterLoaded() {}
 
-servicesSticky();
+function textAnimation() {
+  const titles = document.querySelectorAll('h2 , .section-heading__desc');
+  titles.forEach(title => {
+    const textSplit = new SplitText(title, {
+      type: 'chars, lines',
+      charsClass: 'oh',
+      linesClass: 'oh',
+    });
+    const tl1 = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: title,
+          start: 'top 85%',
+        },
+      })
+      .fromTo(
+        textSplit.chars,
+        {
+          y: 200,
+        },
+        {
+          duration: 0.8,
+          y: 0,
 
-onLoadAnim();
+          stagger: 0.01,
+        }
+      );
+  });
+}
 
-instaAnim();
+window.addEventListener('load', () => {
+  onLoadAnim();
+  instaAnim();
+  servicesSticky();
+  chronology();
+  textAnimation();
+});

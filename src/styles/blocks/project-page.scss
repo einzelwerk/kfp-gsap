@@ -1,7 +1,12 @@
+@use '../utils/mixins' as *;
+
 .project-content {
   display: flex;
   align-items: flex-start;
   margin-top: var(--gap);
+  @include media(md) {
+    flex-direction: column;
+  }
   &__gallery {
     flex: 1;
     display: grid;
@@ -9,6 +14,8 @@
     gap: var(--gap);
   }
   &__item {
+    border-radius: 20px;
+    overflow: hidden;
     &:first-child {
       grid-column: span 2;
     }
@@ -17,6 +24,9 @@
     }
     &:nth-child(5) {
       grid-row: span 2;
+      @include media(md) {
+        grid-column: span 2;
+      }
     }
     img {
       width: 100%;
@@ -27,13 +37,20 @@
 }
 
 .sidebar-project {
-  display: flex;
-  flex-direction: column;
-  width: 440px;
-  padding: var(--gap);
-  border: 1px solid var(--gray-200);
-  border-radius: 20px;
-  margin-right: var(--gap);
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    width: 440px;
+    padding: var(--gap);
+    border: 1px solid var(--gray-200);
+    border-radius: 20px;
+    margin-right: var(--gap);
+    @include media(md) {
+      width: 100%;
+      margin-bottom: 16px;
+      margin-right: 0;
+    }
+  }
   &__item {
     margin-bottom: 30px;
     &:last-child {
@@ -63,8 +80,9 @@
     }
     p {
       margin-bottom: 1rem;
+      overflow: hidden;
       &:not(:first-child) {
-        display: none;
+
       }
     }
   }

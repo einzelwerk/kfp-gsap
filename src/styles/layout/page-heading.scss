@@ -1,15 +1,27 @@
+@use '../utils/mixins' as *;
+
 .page-heading {
   display: flex;
   justify-content: space-between;
-
+  @include media(md) {
+    flex-direction: column;
+  }
   &__title {
     font-size: 52px;
     max-width: 1103px;
+    @include media(md) {
+      font-size: 36px;
+
+    }
   }
   &__desc {
     max-width: 440px;
     line-height: 140%;
     font-size: 20px;
-    color:var(--gray-700)
+    color:var(--gray-700);
+    @include media(md) {
+      margin-top: 32px;
+
+    }
   }
 }

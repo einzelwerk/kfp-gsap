@@ -1,7 +1,12 @@
+@use '../utils/mixins' as *;
+
 .career-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--gap);
+  @include media(md) {
+    grid-template-columns: 1fr;
+  }
   &__item {
     height: 0;
     position: relative;
@@ -47,6 +52,9 @@
     font-size: 32px;
     color: var(--background);
     line-height: 130%;
+    @include media(lg) {
+      font-size: 24px;
+    }
   }
 
   &__btn {

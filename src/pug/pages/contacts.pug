@@ -2,38 +2,39 @@ extends ../layouts/main
 
 block content
   section.section.section--top-small.container
-    .contacts 
-      .contacts__text 
+    .contacts
+      .contacts__text
         h1.contacts__title Erwecken Sie Ihre Vision zum Leben
         p.contacts__desc Unser Team von erfahrenen Spezialisten ist bereit, Ihren Anruf entgegenzunehmen.
-      .contacts__info 
-        .contacts__item 
+      .contacts__info
+        .contacts__item
           h2.contacts__heading Address
           address.contacts__value Alfredstraße 155, D-45131 Essen
-        .contacts__item 
+        .contacts__item
           h2.contacts__heading Phone
           .contacts__value
-            a.contacts__link(href="tel:+49 201 84275-0") +49 201 84275-0 
-        .contacts__item 
+            a.contacts__link(href="tel:+49 201 84275-0") +49 201 84275-0
+        .contacts__item
           h2.contacts__heading Email
           .contacts__value
             a.contacts__link(href="mailto:info@architekten-kfp.de") info@architekten-kfp.de
-    .contacts-map 
-      picture.contacts-map__image 
-        source(media="(min-width: )" srcset="")
-        img(src=require('@/images/map.jpg'), alt="")
-      .contacts-map__toolbox
-        .contacts-map__toolbox-content.toolbox-content 
-          .toolbox-content__company KFP 
-          address.toolbox-content__address Alfredstraße 155, D-45131 Essen
-          a.toolbox-content__link(href="tel:+49 201 84275-0") +49 201 84275-0
-        .contacts-map__pin 
-          svg.svg-icon(width="37" height="47")
-            use(xlink:href="sprite.svg#location_sprite")
-      a.contacts-map__route-link(href="") Routenplaner
-        svg.svg-icon(width="20" height="20")
-          use(xlink:href="sprite.svg#route_sprite")
-  section.section.section--no-top.container 
+    .contacts-map
+      .contacts-map-inner
+        picture.contacts-map__image
+          source(media="(min-width: )" srcset="")
+          img(src=require('@/images/map.jpg'), alt="")
+        .contacts-map__toolbox
+          .contacts-map__toolbox-content.toolbox-content
+            .toolbox-content__company KFP
+            address.toolbox-content__address Alfredstraße 155, D-45131 Essen
+            a.toolbox-content__link(href="tel:+49 201 84275-0") +49 201 84275-0
+          .contacts-map__pin
+            svg.svg-icon(width="37" height="47")
+              use(xlink:href="sprite.svg#location_sprite")
+        a.contacts-map__route-link(href="") Routenplaner
+          svg.svg-icon(width="20" height="20")
+            use(xlink:href="sprite.svg#route_sprite")
+  section.section.section--no-top.container
     - locals.sectionTitle = 'Kontakt aufnehmen'
     - locals.sectionDesc = 'Wir werden Sie so schnell wie möglich zurückrufen. Unsere Manager arbeiten bereits daran'
     include ../partials/section-heading
@@ -41,37 +42,39 @@ block content
       fieldset.career-proposal__grid-field.career-proposal__grid-field--secondary
         span.career-proposal__item
           label.career-proposal__label
-            input.career-proposal__input(type="text" placeholder="Vorname*") 
+            input.career-proposal__input(type="text" placeholder="Vorname*")
         span.career-proposal__item
           label.career-proposal__label
-            input.career-proposal__input.career-proposal__input--valid-error(type="text" placeholder="Nachname*") 
+            input.career-proposal__input.career-proposal__input--valid-error(type="text" placeholder="Nachname*")
         span.career-proposal__item
           label.career-proposal__label
-            input.career-proposal__input(type="email" placeholder="E-Mail*") 
+            input.career-proposal__input(type="email" placeholder="E-Mail*")
         span.career-proposal__item
           label.career-proposal__label
-            input.career-proposal__input(type="tel" placeholder="Telefon*") 
+            input.career-proposal__input(type="tel" placeholder="Telefon*")
         span.career-proposal__item
           label.career-proposal__label
-            input.career-proposal__input(type="tel" placeholder="Thema") 
+            input.career-proposal__input(type="tel" placeholder="Thema")
         span.career-proposal__item
           label.career-proposal__label
             input.career-proposal__file.js-attached-files(type="file" multiple)
-            span.career-proposal__file-placeholder 
+            span.career-proposal__file-placeholder
               .career-proposal__file-placeholder-text  CV hochladen
               svg.career-proposal__clip-icon(width="18" height="18")
                 use(xlink:href="sprite.svg#clip_sprite")
-          span.attached-files-area 
-            span.attached-files 
+          span.attached-files-area
+            span.attached-files
         span.career-proposal__item
           label.career-proposal__label
             textarea.career-proposal__input.career-proposal__textarea(placeholder="Nachricht")
       span.career-proposal__item.career-proposal__item--checkbox
         label.career-proposal__label
           input.career-proposal__checkbox(type="checkbox")
-          span.career-proposal__checkbox-text Hiermit akzeptiere ich die 
-            a.career-proposal__link(href="#") Datenschutzbedingungen 
-      button.career-proposal__submit.btn.btn--primary Absenden
+          span.career-proposal__checkbox-text
+            span Hiermit akzeptiere ich die
+             a.career-proposal__link(href="#")  Datenschutzbedingungen
+      button.career-proposal__submit.btn.btn--primary
+        span.btn__text  Nachricht senden
 
 
 

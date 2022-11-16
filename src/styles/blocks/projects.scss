@@ -1,13 +1,20 @@
+@use '../utils/mixins' as *;
+
 .projects {
   margin-top: 80px;
-
+  @include media(md) {
+    margin-top: 40px;
+  }
 }
-
 
 .projects-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 48px 30px;
+  @include media(sm) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
   &__image {
     height: 0;
     padding-bottom: calc(450px / 675px * 100%);
@@ -26,10 +33,16 @@
   }
   &__info {
     padding: 32px 0 0;
+    @include media(md) {
+      padding: 24px 0 0;
+    }
   }
   &__meta {
     font-size: 20px;
     color: var(--gray-500);
+    @include media(sm) {
+      font-size: 16px;
+    }
   }
   &__categories {
     &:after {
@@ -42,6 +55,9 @@
   &__title {
     font-size: 32px;
     margin-top: 16px;
+    @include media(sm) {
+      margin-top: 10px;
+      font-size: 24px;
+    }
   }
 }
-

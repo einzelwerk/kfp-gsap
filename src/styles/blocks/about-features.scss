@@ -1,3 +1,5 @@
+@use '../utils/mixins' as *;
+
 .about-features {
   background: var(--accent-color);
   color: var(--text-on-accent);
@@ -6,21 +8,42 @@
   padding: var(--gap);
   border-radius: 20px;
   margin-top: var(--gap);
+  @include media(md) {
+    flex-direction: column;
+    padding: 24px var(--gap);
+  }
   &__item {
     flex: 1;
+    @include media(md) {
+      margin-bottom: 32px;
+      &:last-child {
+        margin: 0;
+      }
+    }
   }
   &__number {
     font-size: 52px;
     margin-bottom: 16px;
     display: block;
+    @include media(md) {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
   }
   &__title {
     font-size: 24px;
+    @include media(md) {
+      font-size: 20px;
+    }
   }
   &__desc {
-    color:var(--gray-400);
+    color: var(--gray-400);
     font-size: 18px;
     max-width: 300px;
     margin-top: 100px;
+    @include media(md) {
+      margin-top: 16px;
+      font-size: 16px;
+    }
   }
 }

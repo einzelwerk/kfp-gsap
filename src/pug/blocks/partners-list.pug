@@ -42,10 +42,10 @@
     },
   ]
 
-section.section.container 
+section.section.section--border-top.container
   h2.partners-title Wir arbeiten bereits mit diesen Unternehmen zusammen und schätzen sie sehr
   .partners-list(role="list")
-    each part in partners 
+    each part in partners
       .partners-list__item(role="listitem")
         img.partners-list__image(src=part.image alt=part.title)
   if (link)
@@ -53,7 +53,8 @@ section.section.container
       span.partners-link-more__text Zur Partnerübersicht
       - locals.cClass = 'partners-link-more__icon'
       include ../blocks/arrow-btn
-  else 
-    button.partners-list__btn.btn.btn--empty Mehr laden
+  else
+    button.partners-list__btn.btn.btn--empty
+      span.btn__text Mehr laden
 
 

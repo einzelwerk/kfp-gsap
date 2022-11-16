@@ -1,9 +1,12 @@
 @use "../utils/mixins" as *;
 
 .footer-inner {
-  padding: 60px 40px;
+  padding: 60px var(--gap);
   display: flex;
   justify-content: space-between;
+  @include media(md) {
+    flex-direction: column;
+  }
 }
 
 .footer {
@@ -13,6 +16,9 @@
       margin-right: 0;
       margin-bottom: 12px;
       line-height: 150%;
+      @include media(lg) {
+        font-size: 18px;
+      }
       &:last-child {
         margin: 0;
       }
@@ -33,11 +39,38 @@
   &__info {
     display: grid;
     grid-template-columns: minmax(max-content, 180px) 1fr;
-    gap:20px 80px;
+    gap: 20px 80px;
+    @include media(md) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
   }
   &__heading {
     color: var(--gray-400);
     margin-bottom: 16px;
+  }
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 32px var(--gap) 40px;
+    border-top: 1px solid var(--gray-200);
+    @include media(sm) {
+      flex-direction: column;
+    }
+  }
+  &__copyright {
+    color: var(--gray-400);
+    @include media(md) {
+      margin-bottom: 24px;
+    }
+  }
+  &__link {
+    margin-right: 32px;
+    &:last-child {
+      margin: 0;
+    }
   }
 }
 

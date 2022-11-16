@@ -1,10 +1,18 @@
+@use '../utils/mixins' as *;
+
 .editor-content {
   font-size: 18px;
   h1 {
     font-size: 48px;
+    @include media(md) {
+      font-size: 42px;
+    }
   }
   h2 {
     font-size: 32px;
+    @include media(md) {
+      font-size: 28px;
+    }
   }
   h3 {
     font-size: 24px;
@@ -36,9 +44,21 @@
   }
   section {
     margin-bottom: 48px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include media(md) {
+      margin-bottom: 36px;
+    }
   }
   figure {
     margin-bottom: 48px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include media(md) {
+      margin-bottom: 36px;
+    }
   }
   ul {
     color: var(--gray-500);

@@ -32,13 +32,13 @@ body {
 
 .hidden-desktop {
   @include media(lg, min-width) {
-    display: none;
+    display: none !important;
   }
 }
 
 .hidden-mobile {
   @include media(lg) {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -63,7 +63,7 @@ img {
   }
   &--black {
     background: var(--accent-color);
-    color:var(--background)
+    color: var(--background);
   }
   &--no-top {
     padding-top: 0;
@@ -80,5 +80,13 @@ img {
   &--bot {
     padding-top: 0;
     padding-bottom: var(--gap-y);
+  }
+  &--border-top {
+    border: 1px solid var(--gray-200);
+  }
+  &--margin {
+    border-radius: 20px;
+    padding: var(--gap);
+    margin: 0 var(--gap);
   }
 }

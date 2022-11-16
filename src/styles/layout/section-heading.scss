@@ -1,7 +1,13 @@
+@use '../utils/mixins' as *;
+
 .section-heading {
   display: flex;
   justify-content: space-between;
   margin-bottom: 72px;
+  @include media(md) {
+    flex-direction: column;
+    margin-bottom: 48px;
+  }
   &--white {
     color: var(--background);
   }
@@ -12,11 +18,18 @@
     font-size: 40px;
     line-height: 120%;
     max-width: 620px;
+
+    @include media(sm) {
+      font-size: 30px;
+    }
   }
   &__desc {
     color: var(--secondary-text);
     max-width: 440px;
     line-height: 140%;
     font-size: 20px;
+    @include media(md) {
+      margin-top: 20px;
+    }
   }
 }

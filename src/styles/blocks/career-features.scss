@@ -1,3 +1,5 @@
+@use '../utils/mixins' as *;
+
 .career-features-section {
   margin: 30px var(--gap) 0;
   padding: var(--gap);
@@ -9,6 +11,9 @@
   &__title {
     font-size: 40px;
     margin-bottom: 48px;
+    @include media(md) {
+      font-size: 30px;
+    }
     span {
       text-decoration: underline;
     }
@@ -18,7 +23,11 @@
 .career-features-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap:30px;
+  gap: 30px;
+  @include media(md) {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
   &__item {
     background: var(--background);
     padding: var(--gap);
@@ -28,6 +37,10 @@
     width: 64px;
     height: 64px;
     margin-bottom: 36px;
+    @include media(md) {
+      width: 50px;
+      height: 50px;
+    }
   }
   &__image-src {
     width: 100%;
@@ -36,5 +49,8 @@
   }
   &__title {
     font-size: 24px;
+    @include media(md) {
+      font-size: 20px;
+    }
   }
 }

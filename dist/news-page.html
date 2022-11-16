@@ -1,1 +1,284 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><title></title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no"><script defer="defer" src="assets/main.js"></script><link href="assets/css/main.css" rel="stylesheet"></head><body><div class="preloader"><div class="preloader__logo logo"><img class="logo__src" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDYiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCA0NiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMTcuNDAwM1YwLjYyNDAwM0gyLjkxNDE4VjkuMjYwNjJMMTEuNjA0NyAwLjYwMDM0MkgxNC44MzExTDcuNTQ1NjQgOC4wMzAyTDE1LjI0NzQgMTcuNDAwM0gxMS45NDI5TDUuNjk4MjYgOS43MTAyTDIuOTE0MTggMTIuMzM2N1YxNy40MDAzSDBaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTcuMTc2OSAxNy40MDAzVjAuNjAwMzQySDI5LjQ4NDFWMi45NDI4OEgyMC4wOTExVjcuOTU5MjJIMjcuOTQ5VjEwLjE1OThIMjAuMDkxMVYxNy40MDAzSDE3LjE3NjlaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMzIuMjQ0OCAxNy40MDAzVjAuNjAwMzQySDM5Ljk5ODZDNDAuODMxMiAwLjYwMDM0MiA0MS41OTQ1IDAuNzU4MDg4IDQyLjI4ODMgMS4wNzM1OEM0Mi45ODIyIDEuMzg5MDcgNDMuNTg5MyAxLjgwNzEgNDQuMTA5NyAyLjMyNzY3QzQ0LjYzMDEgMi44NDgyMyA0NS4wMjkgMy40MzE4OSA0NS4zMDY2IDQuMDc4NjVDNDUuNTg0MSA0LjcyNTQxIDQ1LjcyMjkgNS4zODc5NSA0NS43MjI5IDYuMDY2MjZDNDUuNzIyOSA2Ljk5Njk2IDQ1LjQ4ODcgNy44ODgyMyA0NS4wMjA0IDguNzQwMDZDNDQuNTY5NCA5LjU3NjEyIDQzLjkxODkgMTAuMjU0NCA0My4wNjg5IDEwLjc3NUM0Mi4yMzYzIDExLjI5NTYgNDEuMjY0OSAxMS41NTU4IDQwLjE1NDcgMTEuNTU1OEgzNS4xNTlWMTcuNDAwM0gzMi4yNDQ4Wk0zNS4xNTkgOS4yMTMzSDM5Ljk3MjZDNDAuNTI3NyA5LjIxMzMgNDEuMDEzNCA5LjA3OTIyIDQxLjQyOTcgOC44MTEwNUM0MS44NDYgOC41MjcxIDQyLjE2NjkgOC4xNDg1MSA0Mi4zOTI0IDcuNjc1MjdDNDIuNjM1MiA3LjIwMjAzIDQyLjc1NjcgNi42NjU2OSA0Mi43NTY3IDYuMDY2MjZDNDIuNzU2NyA1LjQ1MTA1IDQyLjYxNzkgNC45MDY4MiA0Mi4zNDA0IDQuNDMzNThDNDIuMDYyOCAzLjk2MDM0IDQxLjY5ODUgMy41OTc1MyA0MS4yNDc1IDMuMzQ1MTNDNDAuODEzOSAzLjA3Njk2IDQwLjMzNjkgMi45NDI4OCAzOS44MTY1IDIuOTQyODhIMzUuMTU5VjkuMjEzM1oiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt=""></div></div><div class="custom-cursor" aria-hidden="true"><span class="custom-cursor__inner">Ziehen</span></div><div id="smooth-wrapper"><div id="smooth-content"><header class="header"><div class="header-inner container"><div class="header__logo logo"><a class="logo__link" href="/"><img class="logo__src" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDYiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCA0NiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMTcuNDAwM1YwLjYyNDAwM0gyLjkxNDE4VjkuMjYwNjJMMTEuNjA0NyAwLjYwMDM0MkgxNC44MzExTDcuNTQ1NjQgOC4wMzAyTDE1LjI0NzQgMTcuNDAwM0gxMS45NDI5TDUuNjk4MjYgOS43MTAyTDIuOTE0MTggMTIuMzM2N1YxNy40MDAzSDBaIiBmaWxsPSIjMTQxNDE0Ii8+CjxwYXRoIGQ9Ik0xNy4xNzY5IDE3LjQwMDNWMC42MDAzNDJIMjkuNDg0MVYyLjk0Mjg4SDIwLjA5MTFWNy45NTkyMkgyNy45NDlWMTAuMTU5OEgyMC4wOTExVjE3LjQwMDNIMTcuMTc2OVoiIGZpbGw9IiMxNDE0MTQiLz4KPHBhdGggZD0iTTMyLjI0NDggMTcuNDAwM1YwLjYwMDM0MkgzOS45OTg2QzQwLjgzMTIgMC42MDAzNDIgNDEuNTk0NSAwLjc1ODA4OCA0Mi4yODgzIDEuMDczNThDNDIuOTgyMiAxLjM4OTA3IDQzLjU4OTMgMS44MDcxIDQ0LjEwOTcgMi4zMjc2N0M0NC42MzAxIDIuODQ4MjMgNDUuMDI5IDMuNDMxODkgNDUuMzA2NiA0LjA3ODY1QzQ1LjU4NDEgNC43MjU0MSA0NS43MjI5IDUuMzg3OTUgNDUuNzIyOSA2LjA2NjI2QzQ1LjcyMjkgNi45OTY5NiA0NS40ODg3IDcuODg4MjMgNDUuMDIwNCA4Ljc0MDA2QzQ0LjU2OTQgOS41NzYxMiA0My45MTg5IDEwLjI1NDQgNDMuMDY4OSAxMC43NzVDNDIuMjM2MyAxMS4yOTU2IDQxLjI2NDkgMTEuNTU1OCA0MC4xNTQ3IDExLjU1NThIMzUuMTU5VjE3LjQwMDNIMzIuMjQ0OFpNMzUuMTU5IDkuMjEzM0gzOS45NzI2QzQwLjUyNzcgOS4yMTMzIDQxLjAxMzQgOS4wNzkyMiA0MS40Mjk3IDguODExMDVDNDEuODQ2IDguNTI3MSA0Mi4xNjY5IDguMTQ4NTEgNDIuMzkyNCA3LjY3NTI3QzQyLjYzNTIgNy4yMDIwMyA0Mi43NTY3IDYuNjY1NjkgNDIuNzU2NyA2LjA2NjI2QzQyLjc1NjcgNS40NTEwNSA0Mi42MTc5IDQuOTA2ODIgNDIuMzQwNCA0LjQzMzU4QzQyLjA2MjggMy45NjAzNCA0MS42OTg1IDMuNTk3NTMgNDEuMjQ3NSAzLjM0NTEzQzQwLjgxMzkgMy4wNzY5NiA0MC4zMzY5IDIuOTQyODggMzkuODE2NSAyLjk0Mjg4SDM1LjE1OVY5LjIxMzNaIiBmaWxsPSIjMTQxNDE0Ii8+Cjwvc3ZnPgo=" alt=""></a></div><nav class="header__nav nav"><ul class="nav-list"><li class="nav__item"><a class="nav__link" href="/projects.html"><span>Projekte</span><span aria-hidden="true">Projekte</span></a></li><li class="nav__item"><a class="nav__link" href="/services.html"><span>Leistungen</span><span aria-hidden="true">Leistungen</span></a></li><li class="nav__item"><a class="nav__link" href="/about.html"><span>Wir</span><span aria-hidden="true">Wir</span></a></li><li class="nav__item"><a class="nav__link" href="/partners.html"><span>Partner</span><span aria-hidden="true">Partner</span></a></li><li class="nav__item nav__item--count"><a class="nav__link" href="/career.html"><span>Karriere</span><span aria-hidden="true">Karriere</span></a><span class="nav__count">3</span></li><li class="nav__item"><a class="nav__link" href="/contacts.html"><span>Kontakt</span><span aria-hidden="true">Kontakt</span></a></li><li class="nav__item"><a class="nav__link" href="/news.html"><span>News</span><span aria-hidden="true">News</span></a></li><li class="nav__item"><a class="nav__link" href="/news-page.html"><span>News Page</span><span aria-hidden="true">News Page</span></a></li><li class="nav__item"><a class="nav__link" href="/career-page.html"><span>Career page</span><span aria-hidden="true">Career page</span></a></li><li class="nav__item"><a class="nav__link" href="/thank-you.html"><span>Thanks</span><span aria-hidden="true">Thanks</span></a></li><li class="nav__item"><a class="nav__link" href="/error-404.html"><span>404</span><span aria-hidden="true">404</span></a></li><li class="nav__item"><a class="nav__link" href="/project-page.html"><span>Project page</span><span aria-hidden="true">Project page</span></a></li></ul></nav><a class="header__btn btn btn--primary js-open-modal" href="#"><span class="btn__text">Jetzt bewerben</span></a></div></header><main class="main"><article class="container"><div class="news-heading"><div class="news-heading__text"><time class="news-heading__date" datetime="2022-08-26 19:00">26.08.2022</time><h1 class="news-heading__title">Empathy in Design: How and Why Everything Looks So Friendly Now</h1><p class="news-heading__desc">Faced with seemingly impassable obstacles, we find solace in rote positivity. Living in, generously speaking, tumultuous times, we look for hope where ever we can get it. In response to this, brands have become friendly.</p></div><picture class="news-heading__image"><source media="(min-width: )" srcset=""><img src="assets/images/news.jpg" alt=""></picture></div><div class="news-content editor-content"><section><h2>Everyone Says "Hi"</h2><p>The big shift in design is in moving the focus from the products onto the people who are going to be using them. Especially now, since we’re moving more and more into the digital spaces, we simply want these spaces to be pleasant to be in. This primarily results in softer color schemes, serif typefaces, cute illustrations.</p><p>These days, we’re getting up close and personal (in a good way). It’s not just the visuals. In the following examples, note the tone of voice: it’s a lot warmer than anything from a decade ago.</p></section><section><h3>Inclusive and Accessible Design</h3><p>The whole trend isn’t just pretty colors and adorable drawings. It’s a massive shift of the focus in design. It’s now unquestionable and self-evident that digital spaces have to be inclusive and welcoming to everyone. Up until a few years ago the web designers didn’t even check whether a website is readable for the colorblind, which is, luckily, no longer the case. Websites are properly structured to be accessible for screen readers, websites are optimized and so can be viewed in the areas that still have poor internet connection. Web is now for everyone, all due to empathy.</p><p>It would take quite some time to go through every stage of computing evolution, so let’s get to the fun part. To the digital revolution. The 1980s marked a ubiquitous transformation from analog tech to digital. These are the interfaces that already existed (out of those that are between people and machines):</p></section><section><h4>Double digitalization</h4><p>The latest fund, the Subversive Metaverse ETF (PUNK) launched in January, focuses on companies both in the U.S. and overseas, and comes with an expense ratio of 75 bps. The actively managed fund looks for companies that have exposure to any of the seven layers of the metaverse: experience, discovery, creator economy, spatial computing, decentralization, human interface and infrastructure.</p><ol><li>Lectus id duis vitae porttitor enim gravida morbi.</li><li>Eu turpis posuere semper feugiat volutpat elit, ultrices suspendisse. Auctor vel in vitae placerat.</li><li>Suspendisse maecenas ac donec scelerisque diam sed est duis purus.</li></ol><p>Discovery, creator economy, spatial computing, decentralization, human interface and infrastructure.</p><ul><li>Lectus id duis vitae porttitor enim gravida morbi.</li><li>Eu turpis posuere semper feugiat volutpat elit, ultrices suspendisse. Auctor vel in vitae placerat.</li><li>Suspendisse maecenas ac donec scelerisque diam sed est duis purus.</li></ul></section><figure class="editor-picture"><img src="assets/images/news-1.jpg" alt=""><figcaption>Note the typefaces on the 60s covers, which are now often evoked via <a href="#" target="_blank" rel="nofollow noopener">Deposit Photos</a></figcaption></figure><figure class="editor-blockquote"><blockquote>“In a world older and more complete than ours they move finished and complete, gifted with extensions of the senses we have lost or never attained, living by voices we shall never hear.”</blockquote><figcaption>— Olivia Rhye, Product Designer</figcaption></figure><section><h2>It Takes Strength to Be Gentle and Kind</h2><p>Designers aren’t politicians to give empty platitudes on remaining hopeful in the darkest times, et cetera. But designers do have a responsibility: a good design is something more than just functional and pleasant on the eyes. A designer should keep in mind not only the final user, but the audience at large. Good design is honest and empathetic.</p><p>While this slice of album covers is hardly representative of the overall 20th century design, it’s specifically the area that is, by default, more focused on emotions. Which is a lot closer to our situation today than any example of a 70s ad for some kitchen appliance.</p></section><section><h2>Now, Now</h2><p>The introduction of the web was somewhat of a reset button. A whole new design space. Starting with stumbles, in both due to its novelty, and the technical limitations at the time, it settled down into something digestible soon enough. Here is a brash generalization: until about 2015, web design was focused on technology, and then the need for personal approach arrived. See where we’re going with this?</p></section><figure class="editor-picture"><img src="assets/images/news-1.jpg" alt=""><figcaption>Note the typefaces on the 60s covers, which are now often evoked via <a href="#" target="_blank" rel="nofollow noopener">Deposit Photos</a></figcaption></figure></div></article><section class="section section--gray container"><div class="section-heading"><h2 class="section-heading__title">Das könnte Sie auch interessieren</h2></div><div class="news-slider swiper js-news-slider"><div class="swiper-wrapper"><article class="news-item swiper-slide"><a class="news-item__link" href="#"><picture class="news-item__image"><source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt=""></picture><div class="news-item__info"><time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time><h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2></div></a></article><article class="news-item swiper-slide"><a class="news-item__link" href="#"><picture class="news-item__image"><source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt=""></picture><div class="news-item__info"><time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time><h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2></div></a></article><article class="news-item swiper-slide"><a class="news-item__link" href="#"><picture class="news-item__image"><source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt=""></picture><div class="news-item__info"><time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time><h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2></div></a></article><article class="news-item swiper-slide"><a class="news-item__link" href="#"><picture class="news-item__image"><source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt=""></picture><div class="news-item__info"><time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time><h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2></div></a></article><article class="news-item swiper-slide"><a class="news-item__link" href="#"><picture class="news-item__image"><source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt=""></picture><div class="news-item__info"><time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time><h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2></div></a></article><article class="news-item swiper-slide"><a class="news-item__link" href="#"><picture class="news-item__image"><source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt=""></picture><div class="news-item__info"><time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time><h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2></div></a></article><article class="news-item swiper-slide"><a class="news-item__link" href="#"><picture class="news-item__image"><source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt=""></picture><div class="news-item__info"><time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time><h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2></div></a></article><article class="news-item swiper-slide"><a class="news-item__link" href="#"><picture class="news-item__image"><source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt=""></picture><div class="news-item__info"><time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time><h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2></div></a></article><article class="news-item swiper-slide"><a class="news-item__link" href="#"><picture class="news-item__image"><source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt=""></picture><div class="news-item__info"><time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time><h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2></div></a></article><article class="news-item swiper-slide"><a class="news-item__link" href="#"><picture class="news-item__image"><source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt=""></picture><div class="news-item__info"><time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time><h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2></div></a></article><article class="news-item swiper-slide"><a class="news-item__link" href="#"><picture class="news-item__image"><source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt=""></picture><div class="news-item__info"><time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time><h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2></div></a></article></div><div class="slider-scrollbar"></div></div></section></main><footer class="footer"><div class="footer-inner container"><div class="footer__logo-section"><div class="footer__logo logo"><a class="footer__logo-link" href="/"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDYiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCA0NiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMTcuNDAwM1YwLjYyNDAwM0gyLjkxNDE4VjkuMjYwNjJMMTEuNjA0NyAwLjYwMDM0MkgxNC44MzExTDcuNTQ1NjQgOC4wMzAyTDE1LjI0NzQgMTcuNDAwM0gxMS45NDI5TDUuNjk4MjYgOS43MTAyTDIuOTE0MTggMTIuMzM2N1YxNy40MDAzSDBaIiBmaWxsPSIjMTQxNDE0Ii8+CjxwYXRoIGQ9Ik0xNy4xNzY5IDE3LjQwMDNWMC42MDAzNDJIMjkuNDg0MVYyLjk0Mjg4SDIwLjA5MTFWNy45NTkyMkgyNy45NDlWMTAuMTU5OEgyMC4wOTExVjE3LjQwMDNIMTcuMTc2OVoiIGZpbGw9IiMxNDE0MTQiLz4KPHBhdGggZD0iTTMyLjI0NDggMTcuNDAwM1YwLjYwMDM0MkgzOS45OTg2QzQwLjgzMTIgMC42MDAzNDIgNDEuNTk0NSAwLjc1ODA4OCA0Mi4yODgzIDEuMDczNThDNDIuOTgyMiAxLjM4OTA3IDQzLjU4OTMgMS44MDcxIDQ0LjEwOTcgMi4zMjc2N0M0NC42MzAxIDIuODQ4MjMgNDUuMDI5IDMuNDMxODkgNDUuMzA2NiA0LjA3ODY1QzQ1LjU4NDEgNC43MjU0MSA0NS43MjI5IDUuMzg3OTUgNDUuNzIyOSA2LjA2NjI2QzQ1LjcyMjkgNi45OTY5NiA0NS40ODg3IDcuODg4MjMgNDUuMDIwNCA4Ljc0MDA2QzQ0LjU2OTQgOS41NzYxMiA0My45MTg5IDEwLjI1NDQgNDMuMDY4OSAxMC43NzVDNDIuMjM2MyAxMS4yOTU2IDQxLjI2NDkgMTEuNTU1OCA0MC4xNTQ3IDExLjU1NThIMzUuMTU5VjE3LjQwMDNIMzIuMjQ0OFpNMzUuMTU5IDkuMjEzM0gzOS45NzI2QzQwLjUyNzcgOS4yMTMzIDQxLjAxMzQgOS4wNzkyMiA0MS40Mjk3IDguODExMDVDNDEuODQ2IDguNTI3MSA0Mi4xNjY5IDguMTQ4NTEgNDIuMzkyNCA3LjY3NTI3QzQyLjYzNTIgNy4yMDIwMyA0Mi43NTY3IDYuNjY1NjkgNDIuNzU2NyA2LjA2NjI2QzQyLjc1NjcgNS40NTEwNSA0Mi42MTc5IDQuOTA2ODIgNDIuMzQwNCA0LjQzMzU4QzQyLjA2MjggMy45NjAzNCA0MS42OTg1IDMuNTk3NTMgNDEuMjQ3NSAzLjM0NTEzQzQwLjgxMzkgMy4wNzY5NiA0MC4zMzY5IDIuOTQyODggMzkuODE2NSAyLjk0Mjg4SDM1LjE1OVY5LjIxMzNaIiBmaWxsPSIjMTQxNDE0Ii8+Cjwvc3ZnPgo=" alt=""></a></div><p class="footer__desc">Das Architekturbüro KFP entwickelt seit über 40 Jahren Bauprojekte im Gesundheitswesen.</p></div><div class="footer__info"><div class="footer__info-col"><h6 class="footer__heading">Navigation</h6><nav class="footer__nav nav"><ul class="nav-list"><li class="nav__item"><a class="nav__link" href="/projects.html">Projekte</a></li><li class="nav__item"><a class="nav__link" href="/services.html">Leistungen</a></li><li class="nav__item"><a class="nav__link" href="/about.html">Wir</a></li><li class="nav__item"><a class="nav__link" href="/partners.html">Partner</a></li><li class="nav__item nav__item--count"><a class="nav__link" href="/career.html">Karriere</a><span class="nav__count">3</span></li><li class="nav__item"><a class="nav__link" href="/contacts.html">Kontakt</a></li><li class="nav__item"><a class="nav__link" href="/news.html">News</a></li><li class="nav__item"><a class="nav__link" href="/news-page.html">News Page</a></li><li class="nav__item"><a class="nav__link" href="/career-page.html">Career page</a></li><li class="nav__item"><a class="nav__link" href="/thank-you.html">Thanks</a></li><li class="nav__item"><a class="nav__link" href="/error-404.html">404</a></li><li class="nav__item"><a class="nav__link" href="/project-page.html">Project page</a></li></ul></nav></div><div class="footer__contacts contacts-list"><div class="contacts-list__item"><h6 class="contacts-list__heading">Adresse</h6><address class="contacts-list__content">Alfredstraße 155, 45131 Essen</address></div><div class="contacts-list__item"><h6 class="contacts-list__heading">Telefon</h6><div class="contacts-list__content"><a class="contacts-list__link" href="tel:+49 201 84275-0">+49 201 84275-0</a></div></div><div class="contacts-list__item"><h6 class="contacts-list__heading">E-Mail</h6><div class="contacts-list__content"><a class="contacts-list__link" href="mailto:info@architekten-kfp.de">info@architekten-kfp.de</a></div></div></div></div></div></footer></div></div></body></html>
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <script defer src="assets/main.js"></script><link href="assets/css/main.css" rel="stylesheet"></head>
+  <body>
+    <div class="custom-cursor" aria-hidden="true"><span class="custom-cursor__inner">Ziehen</span></div>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+<header class="header">
+  <div class="header-inner container">
+    <div class="header__logo logo"><a class="logo__link" href="/"><img class="logo__src" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDYiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCA0NiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMTcuNDAwM1YwLjYyNDAwM0gyLjkxNDE4VjkuMjYwNjJMMTEuNjA0NyAwLjYwMDM0MkgxNC44MzExTDcuNTQ1NjQgOC4wMzAyTDE1LjI0NzQgMTcuNDAwM0gxMS45NDI5TDUuNjk4MjYgOS43MTAyTDIuOTE0MTggMTIuMzM2N1YxNy40MDAzSDBaIiBmaWxsPSIjMTQxNDE0Ii8+CjxwYXRoIGQ9Ik0xNy4xNzY5IDE3LjQwMDNWMC42MDAzNDJIMjkuNDg0MVYyLjk0Mjg4SDIwLjA5MTFWNy45NTkyMkgyNy45NDlWMTAuMTU5OEgyMC4wOTExVjE3LjQwMDNIMTcuMTc2OVoiIGZpbGw9IiMxNDE0MTQiLz4KPHBhdGggZD0iTTMyLjI0NDggMTcuNDAwM1YwLjYwMDM0MkgzOS45OTg2QzQwLjgzMTIgMC42MDAzNDIgNDEuNTk0NSAwLjc1ODA4OCA0Mi4yODgzIDEuMDczNThDNDIuOTgyMiAxLjM4OTA3IDQzLjU4OTMgMS44MDcxIDQ0LjEwOTcgMi4zMjc2N0M0NC42MzAxIDIuODQ4MjMgNDUuMDI5IDMuNDMxODkgNDUuMzA2NiA0LjA3ODY1QzQ1LjU4NDEgNC43MjU0MSA0NS43MjI5IDUuMzg3OTUgNDUuNzIyOSA2LjA2NjI2QzQ1LjcyMjkgNi45OTY5NiA0NS40ODg3IDcuODg4MjMgNDUuMDIwNCA4Ljc0MDA2QzQ0LjU2OTQgOS41NzYxMiA0My45MTg5IDEwLjI1NDQgNDMuMDY4OSAxMC43NzVDNDIuMjM2MyAxMS4yOTU2IDQxLjI2NDkgMTEuNTU1OCA0MC4xNTQ3IDExLjU1NThIMzUuMTU5VjE3LjQwMDNIMzIuMjQ0OFpNMzUuMTU5IDkuMjEzM0gzOS45NzI2QzQwLjUyNzcgOS4yMTMzIDQxLjAxMzQgOS4wNzkyMiA0MS40Mjk3IDguODExMDVDNDEuODQ2IDguNTI3MSA0Mi4xNjY5IDguMTQ4NTEgNDIuMzkyNCA3LjY3NTI3QzQyLjYzNTIgNy4yMDIwMyA0Mi43NTY3IDYuNjY1NjkgNDIuNzU2NyA2LjA2NjI2QzQyLjc1NjcgNS40NTEwNSA0Mi42MTc5IDQuOTA2ODIgNDIuMzQwNCA0LjQzMzU4QzQyLjA2MjggMy45NjAzNCA0MS42OTg1IDMuNTk3NTMgNDEuMjQ3NSAzLjM0NTEzQzQwLjgxMzkgMy4wNzY5NiA0MC4zMzY5IDIuOTQyODggMzkuODE2NSAyLjk0Mjg4SDM1LjE1OVY5LjIxMzNaIiBmaWxsPSIjMTQxNDE0Ii8+Cjwvc3ZnPgo=" alt=""></a></div>
+    <div class="header__nav-wrapper" id="nav">
+      <nav class="header__nav nav">
+        <ul class="nav-list">
+          <li class="nav__item"><a class="nav__link" href="/kfp/projects.html"><span>Projekte</span><span aria-hidden="true">Projekte</span></a>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="/kfp/services.html"><span>Leistungen</span><span aria-hidden="true">Leistungen</span></a>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="/kfp/about.html"><span>Wir</span><span aria-hidden="true">Wir</span></a>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="/kfp/partners.html"><span>Partner</span><span aria-hidden="true">Partner</span></a>
+          </li>
+          <li class="nav__item nav__item--count"><a class="nav__link" href="/kfp/career.html"><span>Karriere</span><span aria-hidden="true">Karriere</span></a><span class="nav__count">3</span>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="/kfp/contacts.html"><span>Kontakt</span><span aria-hidden="true">Kontakt</span></a>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="/kfp/news.html"><span>News</span><span aria-hidden="true">News</span></a>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="/kfp/news-page.html"><span>News Page</span><span aria-hidden="true">News Page</span></a>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="/kfp/career-page.html"><span>Career page</span><span aria-hidden="true">Career page</span></a>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="/kfp/thank-you.html"><span>Thanks</span><span aria-hidden="true">Thanks</span></a>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="/kfp/error-404.html"><span>404</span><span aria-hidden="true">404</span></a>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="/kfp/project-page.html"><span>Project page</span><span aria-hidden="true">Project page</span></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__contact-info hidden-desktop">
+        <div class="contacts-list">
+          <div class="contacts-list__item">
+            <h6 class="contacts-list__heading">Adresse</h6>
+            <address class="contacts-list__content">Alfredstraße 155, 45131 Essen</address>
+          </div>
+          <div class="contacts-list__item">
+            <h6 class="contacts-list__heading">Telefon</h6>
+            <div class="contacts-list__content"><a class="contacts-list__link" href="tel:+49 201 84275-0">+49 201 84275-0</a></div>
+          </div>
+          <div class="contacts-list__item">
+            <h6 class="contacts-list__heading">E-Mail</h6>
+            <div class="contacts-list__content"><a class="contacts-list__link" href="mailto:info@architekten-kfp.de">info@architekten-kfp.de</a></div>
+          </div>
+        </div>
+      </div>
+    </div><a class="header__btn btn btn--primary" href="#"><span class="btn__text">Jetzt bewerben</span></a>
+    <button class="header__mobile-btn mobile-menu-btn hidden-desktop" aria-expanded="false" aria-label="Menü öffnen" aria-controls="nav"><span></span><span></span></button>
+  </div>
+</header>
+        <main class="main">
+          <article class="container">
+            <div class="news-heading">
+              <div class="news-heading__text"> 
+                <time class="news-heading__date" datetime="2022-08-26 19:00">26.08.2022</time>
+                <h1 class="news-heading__title">Empathy in Design: How and Why Everything Looks So Friendly Now</h1>
+                <p class="news-heading__desc">Faced with seemingly impassable obstacles, we find solace in rote positivity. Living in, generously speaking, tumultuous times, we look for hope where ever we can get it. In response to this, brands have become friendly.</p>
+              </div>
+              <picture class="news-heading__image"> 
+                <source media="(min-width: )" srcset=""><img src="assets/images/news.jpg" alt="">
+              </picture>
+            </div>
+            <div class="news-content editor-content">
+              <section>
+                <h2>Everyone Says "Hi"</h2>
+                <p>The big shift in design is in moving the focus from the products onto the people who are going to be using them. Especially now, since we’re moving more and more into the digital spaces, we simply want these spaces to be pleasant to be in. This primarily results in softer color schemes, serif typefaces, cute illustrations. </p>
+                <p>These days, we’re getting up close and personal (in a good way). It’s not just the visuals. In the following examples, note the tone of voice: it’s a lot warmer than anything from a decade ago.</p>
+              </section>
+              <section>
+                <h3>Inclusive and Accessible Design</h3>
+                <p>The whole trend isn’t just pretty colors and adorable drawings. It’s a massive shift of the focus in design. It’s now unquestionable and self-evident that digital spaces have to be inclusive and welcoming to everyone. Up until a few years ago the web designers didn’t even check whether a website is readable for the colorblind, which is, luckily, no longer the case. Websites are properly structured to be accessible for screen readers, websites are optimized and so can be viewed in the areas that still have poor internet connection. Web is now for everyone, all due to empathy.</p>
+                <p>It would take quite some time to go through every stage of computing evolution, so let’s get to the fun part. To the digital revolution. The 1980s marked a ubiquitous transformation from analog tech to digital. These are the interfaces that already existed (out of those that are between people and machines):</p>
+              </section>
+              <section>
+                <h4>Double digitalization</h4>
+                <p>The latest fund, the Subversive Metaverse ETF (PUNK) launched in January, focuses on companies both in the U.S. and overseas, and comes with an expense ratio of 75 bps. The actively managed fund looks for companies that have exposure to any of the seven layers of the metaverse: experience, discovery, creator economy, spatial computing, decentralization, human interface and infrastructure.</p>
+                <ol>
+                  <li>Lectus id duis vitae porttitor enim gravida morbi.</li>
+                  <li>Eu turpis posuere semper feugiat volutpat elit, ultrices suspendisse. Auctor vel in vitae placerat.</li>
+                  <li>Suspendisse maecenas ac donec scelerisque diam sed est duis purus.</li>
+                </ol>
+                <p>Discovery, creator economy, spatial computing, decentralization, human interface and infrastructure.</p>
+                <ul>
+                  <li>Lectus id duis vitae porttitor enim gravida morbi.</li>
+                  <li>Eu turpis posuere semper feugiat volutpat elit, ultrices suspendisse. Auctor vel in vitae placerat.</li>
+                  <li>Suspendisse maecenas ac donec scelerisque diam sed est duis purus.</li>
+                </ul>
+              </section>
+              <figure class="editor-picture"><img src="assets/images/news-1.jpg" alt="">
+                <figcaption>Note the typefaces on the 60s covers, which are now often evoked via <a href="#" target="_blank" rel="nofollow noopener">Deposit Photos </a></figcaption>
+              </figure>
+              <figure class="editor-blockquote">
+                <blockquote>“In a world older and more complete than ours they move finished and complete, gifted with extensions of the senses we have lost or never attained, living by voices we shall never hear.”</blockquote>
+                <figcaption>— Olivia Rhye, Product Designer</figcaption>
+              </figure>
+              <section>
+                <h2>It Takes Strength to Be Gentle and Kind</h2>
+                <p>Designers aren’t politicians to give empty platitudes on remaining hopeful in the darkest times, et cetera. But designers do have a responsibility: a good design is something more than just functional and pleasant on the eyes. A designer should keep in mind not only the final user, but the audience at large. Good design is honest and empathetic.</p>
+                <p>While this slice of album covers is hardly representative of the overall 20th century design, it’s specifically the area that is, by default, more focused on emotions. Which is a lot closer to our situation today than any example of a 70s ad for some kitchen appliance.</p>
+              </section>
+              <section>
+                <h2>Now, Now</h2>
+                <p>The introduction of the web was somewhat of a reset button. A whole new design space. Starting with stumbles, in both due to its novelty, and the technical limitations at the time, it settled down into something digestible soon enough. Here is a brash generalization: until about 2015, web design was focused on technology, and then the need for personal approach arrived. See where we’re going with this?</p>
+              </section>
+              <figure class="editor-picture"><img src="assets/images/news-1.jpg" alt="">
+                <figcaption>Note the typefaces on the 60s covers, which are now often evoked via <a href="#" target="_blank" rel="nofollow noopener">Deposit Photos </a></figcaption>
+              </figure>
+            </div>
+          </article>
+          <section class="section section--gray container">
+<div class="section-heading">
+  <h2 class="section-heading__title">Das könnte Sie auch interessieren</h2>
+</div>
+            <div class="news-slider swiper js-news-slider"> 
+              <div class="swiper-wrapper">
+<article class="news-item swiper-slide"><a class="news-item__link" href="#"> 
+    <picture class="news-item__image"> 
+      <source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt="">
+    </picture>
+    <div class="news-item__info"> 
+      <time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time>
+      <h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2>
+    </div></a></article>
+<article class="news-item swiper-slide"><a class="news-item__link" href="#"> 
+    <picture class="news-item__image"> 
+      <source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt="">
+    </picture>
+    <div class="news-item__info"> 
+      <time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time>
+      <h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2>
+    </div></a></article>
+<article class="news-item swiper-slide"><a class="news-item__link" href="#"> 
+    <picture class="news-item__image"> 
+      <source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt="">
+    </picture>
+    <div class="news-item__info"> 
+      <time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time>
+      <h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2>
+    </div></a></article>
+<article class="news-item swiper-slide"><a class="news-item__link" href="#"> 
+    <picture class="news-item__image"> 
+      <source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt="">
+    </picture>
+    <div class="news-item__info"> 
+      <time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time>
+      <h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2>
+    </div></a></article>
+<article class="news-item swiper-slide"><a class="news-item__link" href="#"> 
+    <picture class="news-item__image"> 
+      <source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt="">
+    </picture>
+    <div class="news-item__info"> 
+      <time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time>
+      <h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2>
+    </div></a></article>
+<article class="news-item swiper-slide"><a class="news-item__link" href="#"> 
+    <picture class="news-item__image"> 
+      <source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt="">
+    </picture>
+    <div class="news-item__info"> 
+      <time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time>
+      <h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2>
+    </div></a></article>
+<article class="news-item swiper-slide"><a class="news-item__link" href="#"> 
+    <picture class="news-item__image"> 
+      <source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt="">
+    </picture>
+    <div class="news-item__info"> 
+      <time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time>
+      <h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2>
+    </div></a></article>
+<article class="news-item swiper-slide"><a class="news-item__link" href="#"> 
+    <picture class="news-item__image"> 
+      <source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt="">
+    </picture>
+    <div class="news-item__info"> 
+      <time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time>
+      <h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2>
+    </div></a></article>
+<article class="news-item swiper-slide"><a class="news-item__link" href="#"> 
+    <picture class="news-item__image"> 
+      <source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt="">
+    </picture>
+    <div class="news-item__info"> 
+      <time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time>
+      <h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2>
+    </div></a></article>
+<article class="news-item swiper-slide"><a class="news-item__link" href="#"> 
+    <picture class="news-item__image"> 
+      <source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt="">
+    </picture>
+    <div class="news-item__info"> 
+      <time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time>
+      <h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2>
+    </div></a></article>
+<article class="news-item swiper-slide"><a class="news-item__link" href="#"> 
+    <picture class="news-item__image"> 
+      <source media="(min-width: )" srcset=""><img src="https://via.placeholder.com/675x420" alt="">
+    </picture>
+    <div class="news-item__info"> 
+      <time class="news-item__date" datetime="2022-08-26 19:00">26.08.2022</time>
+      <h2 class="news-item__title">Brief History of Interfaces: from abacuses to cyberpunk</h2>
+    </div></a></article>
+              </div>
+              <div class="slider-scrollbar"></div>
+            </div>
+          </section>
+        </main>
+<footer class="footer">
+  <div class="footer-inner container">
+    <div class="footer__logo-section">
+      <div class="footer__logo logo"><a class="footer__logo-link" href="/"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDYiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCA0NiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMTcuNDAwM1YwLjYyNDAwM0gyLjkxNDE4VjkuMjYwNjJMMTEuNjA0NyAwLjYwMDM0MkgxNC44MzExTDcuNTQ1NjQgOC4wMzAyTDE1LjI0NzQgMTcuNDAwM0gxMS45NDI5TDUuNjk4MjYgOS43MTAyTDIuOTE0MTggMTIuMzM2N1YxNy40MDAzSDBaIiBmaWxsPSIjMTQxNDE0Ii8+CjxwYXRoIGQ9Ik0xNy4xNzY5IDE3LjQwMDNWMC42MDAzNDJIMjkuNDg0MVYyLjk0Mjg4SDIwLjA5MTFWNy45NTkyMkgyNy45NDlWMTAuMTU5OEgyMC4wOTExVjE3LjQwMDNIMTcuMTc2OVoiIGZpbGw9IiMxNDE0MTQiLz4KPHBhdGggZD0iTTMyLjI0NDggMTcuNDAwM1YwLjYwMDM0MkgzOS45OTg2QzQwLjgzMTIgMC42MDAzNDIgNDEuNTk0NSAwLjc1ODA4OCA0Mi4yODgzIDEuMDczNThDNDIuOTgyMiAxLjM4OTA3IDQzLjU4OTMgMS44MDcxIDQ0LjEwOTcgMi4zMjc2N0M0NC42MzAxIDIuODQ4MjMgNDUuMDI5IDMuNDMxODkgNDUuMzA2NiA0LjA3ODY1QzQ1LjU4NDEgNC43MjU0MSA0NS43MjI5IDUuMzg3OTUgNDUuNzIyOSA2LjA2NjI2QzQ1LjcyMjkgNi45OTY5NiA0NS40ODg3IDcuODg4MjMgNDUuMDIwNCA4Ljc0MDA2QzQ0LjU2OTQgOS41NzYxMiA0My45MTg5IDEwLjI1NDQgNDMuMDY4OSAxMC43NzVDNDIuMjM2MyAxMS4yOTU2IDQxLjI2NDkgMTEuNTU1OCA0MC4xNTQ3IDExLjU1NThIMzUuMTU5VjE3LjQwMDNIMzIuMjQ0OFpNMzUuMTU5IDkuMjEzM0gzOS45NzI2QzQwLjUyNzcgOS4yMTMzIDQxLjAxMzQgOS4wNzkyMiA0MS40Mjk3IDguODExMDVDNDEuODQ2IDguNTI3MSA0Mi4xNjY5IDguMTQ4NTEgNDIuMzkyNCA3LjY3NTI3QzQyLjYzNTIgNy4yMDIwMyA0Mi43NTY3IDYuNjY1NjkgNDIuNzU2NyA2LjA2NjI2QzQyLjc1NjcgNS40NTEwNSA0Mi42MTc5IDQuOTA2ODIgNDIuMzQwNCA0LjQzMzU4QzQyLjA2MjggMy45NjAzNCA0MS42OTg1IDMuNTk3NTMgNDEuMjQ3NSAzLjM0NTEzQzQwLjgxMzkgMy4wNzY5NiA0MC4zMzY5IDIuOTQyODggMzkuODE2NSAyLjk0Mjg4SDM1LjE1OVY5LjIxMzNaIiBmaWxsPSIjMTQxNDE0Ii8+Cjwvc3ZnPgo=" alt=""></a></div>
+      <p class="footer__desc">Das Architekturbüro KFP entwickelt seit über 40 Jahren Bauprojekte im Gesundheitswesen.</p>
+    </div>
+    <div class="footer__info">
+      <div class="footer__info-col">
+        <h6 class="footer__heading">Navigation</h6>
+        <nav class="footer__nav nav">
+          <ul class="nav-list">
+            <li class="nav__item"><a class="nav__link" href="/kfp/projects.html"><span>Projekte</span><span aria-hidden="true">Projekte</span></a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="/kfp/services.html"><span>Leistungen</span><span aria-hidden="true">Leistungen</span></a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="/kfp/about.html"><span>Wir</span><span aria-hidden="true">Wir</span></a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="/kfp/partners.html"><span>Partner</span><span aria-hidden="true">Partner</span></a>
+            </li>
+            <li class="nav__item nav__item--count"><a class="nav__link" href="/kfp/career.html"><span>Karriere</span><span aria-hidden="true">Karriere</span></a><span class="nav__count">3</span>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="/kfp/contacts.html"><span>Kontakt</span><span aria-hidden="true">Kontakt</span></a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="/kfp/news.html"><span>News</span><span aria-hidden="true">News</span></a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="/kfp/news-page.html"><span>News Page</span><span aria-hidden="true">News Page</span></a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="/kfp/career-page.html"><span>Career page</span><span aria-hidden="true">Career page</span></a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="/kfp/thank-you.html"><span>Thanks</span><span aria-hidden="true">Thanks</span></a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="/kfp/error-404.html"><span>404</span><span aria-hidden="true">404</span></a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="/kfp/project-page.html"><span>Project page</span><span aria-hidden="true">Project page</span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__contacts contacts-list">
+        <div class="contacts-list__item">
+          <h6 class="contacts-list__heading">Adresse</h6>
+          <address class="contacts-list__content">Alfredstraße 155, 45131 Essen</address>
+        </div>
+        <div class="contacts-list__item">
+          <h6 class="contacts-list__heading">Telefon</h6>
+          <div class="contacts-list__content"><a class="contacts-list__link" href="tel:+49 201 84275-0">+49 201 84275-0</a></div>
+        </div>
+        <div class="contacts-list__item">
+          <h6 class="contacts-list__heading">E-Mail</h6>
+          <div class="contacts-list__content"><a class="contacts-list__link" href="mailto:info@architekten-kfp.de">info@architekten-kfp.de</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom container"><span class="footer__copyright">© KFP • Architekten• 2022</span>
+    <div class="footer__policy"><a class="footer__link" href=""> Datenschutz</a><a class="footer__link" href="">Impressum</a></div>
+  </div>
+</footer>
+      </div>
+    </div>
+  </body>
+</html>

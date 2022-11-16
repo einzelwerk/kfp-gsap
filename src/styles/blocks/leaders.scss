@@ -1,9 +1,14 @@
+@use '../utils/mixins' as *;
+
 .leaders {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  &__item {
+  @include media(md) {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
+
   &__photo {
     height: 0;
     padding-bottom: calc(520px / 440px * 100%);
@@ -26,11 +31,19 @@
     font-size: 32px;
     margin-bottom: 12px;
     display: block;
+    @include media(md) {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
   }
   &__position {
     font-size: 20px;
     color: var(--gray-500);
     margin-bottom: 24px;
+    @include media(md) {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
   }
   &__link {
     display: flex;
@@ -42,7 +55,7 @@
     }
     .svg-icon {
       margin-left: 8px;
-      transition: .5s;
+      transition: 0.5s;
     }
   }
 }

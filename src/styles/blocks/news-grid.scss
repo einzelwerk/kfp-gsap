@@ -3,16 +3,25 @@
 .news-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 30px 48px;
+  gap: 48px var(--gap);
   @include media(xl) {
-    gap: 30px 38px;
+    gap:38px var(--gap);
+  }
+  @include media(md) {
+    grid-template-columns: 1fr;
   }
   .news-item {
     &:nth-child(1),
     &:nth-child(2) {
       grid-column: span 3;
+      @include media(md) {
+        grid-column: auto;
+      }
       .news-item__title {
         font-size: 32px;
+        @include media(md) {
+          font-size: 20px;
+        }
       }
     }
   }
@@ -25,7 +34,9 @@
 
 .news-item {
   grid-column: span 2;
-
+  @include media(md) {
+    grid-column: auto;
+  }
   &:hover {
     .news-item__image {
       clip-path: inset(var(--gap) var(--gap) var(--gap) var(--gap) round 30px);
@@ -50,6 +61,10 @@
   &__info {
     display: flex;
     padding-top: 32px;
+    @include media(md) {
+      flex-direction: column;
+      padding-top: 24px;
+    }
   }
   &__date {
     color: var(--gray-400);
@@ -57,6 +72,11 @@
     margin-right: 60px;
     @include media(xl) {
       margin-right: 1rem;
+    }
+    @include media(md) {
+      font-size: 16px;
+      margin-right: 0;
+      margin-bottom: 10px;
     }
   }
   &__title {

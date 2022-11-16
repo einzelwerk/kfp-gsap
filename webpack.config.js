@@ -52,6 +52,7 @@ module.exports = {
       return new HtmlWebpackPlugin({
         template: path.resolve(__dirname, pagesDir, file),
         filename: path.parse(file).name + '.html',
+        minify: false,
       });
     }),
     new CleanWebpackPlugin(),
@@ -74,6 +75,9 @@ module.exports = {
         use: [
           {
             loader: 'pug-loader',
+            options: {
+              pretty: true,
+            },
           },
         ],
       },

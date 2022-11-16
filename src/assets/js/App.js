@@ -4,3 +4,4 @@ import './AttachedFiles';
 import './SmoothScroll';
 import './Animations';
 import './CustomCursor';
+import './Nav';

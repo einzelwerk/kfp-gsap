@@ -25,9 +25,9 @@ block content
     .container
       - locals.sectionTitle = 'Angefangen als Familienbetrieb, gewachsen zu einem coolen Unternehmen'
       include ../partials/section-heading
-    .about-slider-wrapper 
+    .about-slider-wrapper
       .about-slider.swiper.js-about-slider
-        .swiper-wrapper 
+        .swiper-wrapper
           .about-slider__slide.swiper-slide 2022
           .about-slider__slide.swiper-slide 2020
           .about-slider__slide.swiper-slide 2018
@@ -35,7 +35,8 @@ block content
           .about-slider__slide.swiper-slide 2018
           .about-slider__slide.swiper-slide(aria-hidden="true")
           .about-slider__slide.swiper-slide(aria-hidden="true")
-
+      .about-slider-line
+        .about-slider-line__active-line
       .about-slider-text.swiper.js-about-slider-text
         .swiper-wrapper
           .about-slider-text__content.swiper-slide
@@ -61,37 +62,37 @@ block content
       include ../partials/section-heading
       - locals.isWhite = false
       .leaders
-        .leaders__item 
-          picture.leaders__photo 
+        .leaders__item
+          picture.leaders__photo
             source(media="(min-width: )" srcset="")
             img.leaders__photo-src(src=require('@/images/lead/1.jpg'), alt="")
-          .leaders__info 
+          .leaders__info
             span.leaders__name Thorsten Kraft
             .leaders__position Geschäftsführer, Dipl.-Ing. / Architekt
             a.leaders__link(href="https://google.com" target="_blank")
-              | LinkedIn Account 
+              | LinkedIn Account
               svg.svg-icon(width="16" height="16")
-                use(xlink:href="sprite.svg#arrow-diagonal_sprite") 
-        .leaders__item 
-          picture.leaders__photo 
+                use(xlink:href="sprite.svg#arrow-diagonal_sprite")
+        .leaders__item
+          picture.leaders__photo
             source(media="(min-width: )" srcset="")
             img.leaders__photo-src(src=require('@/images/lead/2.jpg'), alt="")
-          .leaders__info 
+          .leaders__info
             span.leaders__name Thorsten Kraft
             .leaders__position Geschäftsführer, Dipl.-Ing. / Architekt
             a.leaders__link(href="https://google.com" target="_blank")
-              | LinkedIn Account 
+              | LinkedIn Account
               svg.svg-icon(width="16" height="16")
-                use(xlink:href="sprite.svg#arrow-diagonal_sprite") 
-        .leaders__item 
-          picture.leaders__photo 
+                use(xlink:href="sprite.svg#arrow-diagonal_sprite")
+        .leaders__item
+          picture.leaders__photo
             source(media="(min-width: )" srcset="")
             img.leaders__photo-src(src=require('@/images/lead/3.jpg'), alt="")
-          .leaders__info 
+          .leaders__info
             span.leaders__name Thorsten Kraft
             .leaders__position Geschäftsführer, Dipl.-Ing. / Architekt
             a.leaders__link(href="https://google.com" target="_blank")
-              | LinkedIn Account 
+              | LinkedIn Account
               svg.svg-icon(width="16" height="16")
                 use(xlink:href="sprite.svg#arrow-diagonal_sprite")
   include ../blocks/about-gallery

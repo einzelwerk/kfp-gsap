@@ -9,6 +9,11 @@
       --container: #{$val};
     }
   }
+  @include media(lg) {
+    --gap: 16px;
+    --gap-y: 60px;
+    --small-gap-y: 40px;
+  }
 }
 
 :root {

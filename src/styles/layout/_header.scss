@@ -4,11 +4,39 @@
 .header {
   padding: 20px 0;
   border-bottom: 1px solid var(--gray-200);
+  position: relative;
+  z-index: 1020;
+  background: var(--background);
   &__btn {
     margin-left: auto;
   }
   &__nav {
     margin-left: 40px;
+    @include media(lg) {
+      margin: 0;
+    }
+  }
+  &__mobile-btn {
+    margin-left: 8px;
+  }
+  &__nav-wrapper {
+    @include media(lg) {
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      right: 0;
+      background: var(--background);
+      padding: 20px var(--gap);
+      z-index: 1010;
+      height: calc(100vh - 80px);
+      min-height: 200px;
+      overflow-y: scroll;
+      transition: 0.5s;
+      transform: translateX(-100%);
+      &.opened {
+        transform: translateX(-0%);
+      }
+    }
   }
 }
 
@@ -20,13 +48,23 @@
 .nav-list {
   display: flex;
   align-items: center;
+  @include media(lg) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .nav {
   &__item {
     margin-right: 32px;
+
     @include media(xl) {
       margin-right: 1rem;
+    }
+    @include media(lg) {
+      margin-right: 0;
+      margin-bottom: 24px;
+      font-size: 24px;
     }
     &--count {
       display: flex;
@@ -72,9 +110,47 @@
 .logo {
   width: 46px;
   height: 28px;
+  flex:0 0 auto;
   &__src {
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+}
+
+.mobile-menu-btn {
+  width: 40px;
+  height: 40px;
+  background: var(--gray-100);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  &.opened {
+    span {
+      &:first-child {
+        transform: rotate(45deg);
+        top: 4px;
+      }
+      &:last-child {
+        transform: rotate(-45deg);
+        top: -1px;
+      }
+    }
+  }
+  span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--accent-color);
+    border-radius: 2px;
+    transform-origin: center center;
+    position: relative;
+    transition: 0.5s;
+    &:last-child {
+      margin-top: 0.2rem;
+    }
   }
 }

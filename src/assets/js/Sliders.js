@@ -72,13 +72,18 @@ function sliders() {
     });
     const aboutSliderInstance = new Swiper(aboutSlider, {
       modules: [Thumbs, Scrollbar],
-      slidesPerView: 2.2,
+      slidesPerView: 1.2,
       scrollbar: {
         el: aboutSlider.querySelector('.slider-scrollbar'),
         draggable: true,
       },
       thumbs: {
         swiper: aboutSliderInstanceText,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2.2,
+        },
       },
     });
   }

@@ -1,6 +1,8 @@
+@use '../utils/mixins' as *;
+
 .hero-section {
   padding: 0 var(--gap);
-  margin-top: 30px;
+  margin-top: var(--gap);
 }
 
 .hero {
@@ -8,15 +10,26 @@
   width: 100%;
   padding-bottom: calc(740px / 1360px * 100%);
   position: relative;
+  @include media(sm) {
+    padding-bottom: calc(440px / 328px * 100%);
+  }
   &--small {
     padding-bottom: calc(640px / 1360px * 100%);
+    @include media(sm) {
+      padding-bottom: calc(260px / 328px * 100%);
+    }
   }
   &--tiny {
     padding-bottom: calc(500px / 1360px * 100%);
-
+    @include media(sm) {
+      padding-bottom: calc(360px / 328px * 100%);
+    }
   }
   &--top-gap {
     margin-top: 64px;
+    @include media(sm) {
+      margin-top: 40px;
+    }
   }
   &__content {
     position: absolute;
@@ -28,6 +41,7 @@
     background-size: cover;
     border-radius: 20px;
     overflow: hidden;
+    background-position: center center;
   }
   &__title {
     color: var(--text-on-accent);
@@ -37,6 +51,14 @@
     position: absolute;
     bottom: var(--gap);
     left: var(--gap);
+    @include media(md) {
+      font-size: 50px;
+    }
+
+    @include media(sm) {
+      font-size: 36px;
+    }
+
   }
   &__back-btn {
     position: absolute;
