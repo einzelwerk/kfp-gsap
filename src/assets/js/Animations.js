@@ -27,7 +27,6 @@ function chronology() {
       trigger: '.about-slider-wrapper',
       start: 'top center',
       end: 'center center',
-      markers: true,
     },
   });
   tl.to('.about-slider-line__active-line', {
@@ -36,6 +35,7 @@ function chronology() {
   });
 }
 function animationAfterLoaded() {
+  if (window.matchMedia(breakpoints.isDesktop)) return;
   const h1Split = new SplitText('h1', {
     type: 'chars, lines',
     charsClass: 'oh',
@@ -80,7 +80,8 @@ function animationAfterLoaded() {
 }
 
 function textAnimation() {
-  const titles = document.querySelectorAll('h2, .section-heading__desc');
+  const titles = document.querySelectorAll('.section-heading__title');
+  const plainText = document.querySelectorAll('p , .news-item__title');
   titles.forEach((title) => {
     const headingSplit = new SplitText(title, {
       type: 'chars, lines',
@@ -106,9 +107,29 @@ function textAnimation() {
       }
     );
   });
+  plainText.forEach((text) => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: text,
+        start: 'top 85%',
+      },
+    });
+    tl.fromTo(
+      text,
+      {
+        y: 10,
+        opacity: 0,
+      },
+      {
+        delay: 1,
+        y: 0,
+        opacity: 1,
+      }
+    );
+  });
 }
 
-function instaAnim() {
+function onLoadAnimation() {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: '.hero__content',
@@ -170,7 +191,7 @@ function servicesSticky() {
 
 window.addEventListener('load', () => {
   Preloader();
-  instaAnim();
+  onLoadAnimation();
   chronology();
   textAnimation();
   if (window.matchMedia(breakpoints.isDesktop).matches) {

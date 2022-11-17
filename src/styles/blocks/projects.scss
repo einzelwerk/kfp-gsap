@@ -1,4 +1,13 @@
-@use '../utils/mixins' as *;
+@use "../utils/mixins" as *;
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
 
 .projects {
   margin-top: 80px;
@@ -22,6 +31,19 @@
     position: relative;
     border-radius: 20px;
     overflow: hidden;
+    &:before {
+      content:'';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: var(--accent-color);
+      transition: .5s;
+      opacity: 0;
+      left: 0;
+      top:0;
+      z-index: 3;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -46,7 +68,7 @@
   }
   &__categories {
     &:after {
-      content: '/';
+      content: "/";
       margin-left: 12px;
       margin-right: 12px;
       color: var(--gray-300);
@@ -59,5 +81,52 @@
       margin-top: 10px;
       font-size: 24px;
     }
+  }
+  &__link {
+    &:hover {
+      .projects-list__image {
+        &:before {
+          opacity: .4;
+        }
+      }
+      .projects-list__marquee-overflow {
+        transform: translateY(0);
+      }
+      .projects-list__marquee {
+        &-inner {
+          animation: marquee 7s linear infinite;
+        }
+        &:last-child {
+          .projects-list__marquee-inner {
+              animation: marquee 7s linear infinite reverse;
+          }
+        }
+      }
+    }
+  }
+  &__marquee-wrapper {
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+  }
+  &__marquee {
+
+    color: var(--background);
+    font-size: 4em;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+  }
+  &__marquee-overflow {
+    display: flex;
+    transform: translateY(100%);
+    transition: .5s;
+  }
+  &__marquee-inner {
+    margin-right: var(--gap);
   }
 }

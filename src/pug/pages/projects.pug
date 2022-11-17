@@ -8,7 +8,7 @@ block content
     include ../partials/page-heading
     .projects 
       nav.category(aria-label="Project categories")
-        button.category__item.btn.btn--empty
+        button.category__item.category__item--current.btn.btn--empty
           span.btn__text Alle
           span.category__item-count 20
         button.category__item.btn.btn--empty
@@ -21,7 +21,7 @@ block content
           span.btn__text Verschiedenes
           span.category__item-count 12
         button.category__item.btn.btn--empty 
-          span.btn__textWohnen im Alter
+          span.btn__text Wohnen im Alter
           span.category__item-count 12
       .projects-list
         include ../partials/project-item

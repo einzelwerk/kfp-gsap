@@ -1,18 +1,19 @@
-const webpack = require('webpack')
-const path = require('path')
-const fs = require('fs')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
-const pagesDir = './src/pug/pages'
-const filenames = fs.readdirSync(pagesDir)
-const ESLintPlugin = require('eslint-webpack-plugin')
+const webpack = require('webpack');
+const path = require('path');
+const fs = require('fs');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
-const isProd = process.env.NODE_ENV == 'production'
-const isDev = !isProd
+const pagesDir = './src/pug/pages';
+const filenames = fs.readdirSync(pagesDir);
+const ESLintPlugin = require('eslint-webpack-plugin');
 
-console.log(process.env.NODE_ENV)
+const isProd = process.env.NODE_ENV == 'production';
+const isDev = !isProd;
+
+console.log(process.env.NODE_ENV);
 
 module.exports = {
   mode: isDev,
@@ -43,18 +44,18 @@ module.exports = {
         .dirname(pathData.filename)
         .split('/')
         .slice(1)
-        .join('/')
-      return `${filepath}/[name][ext][query]`
+        .join('/');
+      return `${filepath}/[name][ext][query]`;
     },
   },
   plugins: [
     ...filenames.map((file) => {
-      console.log(file)
+      console.log(file);
       return new HtmlWebpackPlugin({
         template: path.resolve(__dirname, pagesDir, file),
-        filename: path.parse(file).name + '.html',
+        filename: `${path.parse(file).name}.html`,
         minify: false,
-      })
+      });
     }),
     new ESLintPlugin(),
     new CleanWebpackPlugin(),
@@ -140,4 +141,4 @@ module.exports = {
       },
     ],
   },
-}
+};

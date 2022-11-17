@@ -144,4 +144,10 @@ body .career-students-slider__image {
   margin: 60px auto 0;
   display: flex;
   justify-content: center;
+  @include media(md) {
+    .btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
 }

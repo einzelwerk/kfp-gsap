@@ -42,6 +42,9 @@
     border-radius: 20px;
     overflow: hidden;
     background-position: top center;
+    @include media(md) {
+      background-size: cover;
+    }
   }
   &__title {
     color: var(--text-on-accent);

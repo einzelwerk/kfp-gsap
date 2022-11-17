@@ -3,9 +3,19 @@ include ../modules/vars
 each item in locals.projects
   article.projects-list__item(class= locals.slider ? 'swiper-slide' : null)
     a.projects-list__link(href="/project-page.html") 
-      picture.projects-list__image 
-        source(media="(min-width: )" srcset="" sizes="")
-        img(src=item.image, alt="")
+      .projects-list__image
+        picture
+          source(media="(min-width: )" srcset="" sizes="")
+          img(src=item.image, alt="")
+        .projects-list__marquee-wrapper 
+          .projects-list__marquee
+            .projects-list__marquee-overflow 
+              .projects-list__marquee-inner Projekt ansehen / Projekt ansehen / Projekt ansehen / Projekt ansehen !{' '}
+              .projects-list__marquee-inner Projekt ansehen / Projekt ansehen / Projekt ansehen / Projekt ansehen !{' '}
+          .projects-list__marquee 
+            .projects-list__marquee-overflow
+              .projects-list__marquee-inner Projekt ansehen / Projekt ansehen / Projekt ansehen / Projekt ansehen !{' '}
+              .projects-list__marquee-inner Projekt ansehen / Projekt ansehen / Projekt ansehen / Projekt ansehen !{' '}
       .projects-list__info 
         .projects-list__meta
           span.projects-list__categories 
