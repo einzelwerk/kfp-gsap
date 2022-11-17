@@ -1,14 +1,14 @@
-// @ts-nocheck
-import Swiper, {Scrollbar, Thumbs, EffectFade} from 'swiper';
+/* eslint-disable import/no-unresolved */
+import Swiper, { Scrollbar, Thumbs, EffectFade } from 'swiper';
 import 'swiper/scss';
 import 'swiper/scss/thumbs';
 import 'swiper/scss/effect-fade';
-import {breakpoints} from './MatchMedia';
+import breakpoints from './MatchMedia';
 
 function sliders() {
   const portfolioSlider = document.querySelector('.portfolio-slider');
   if (portfolioSlider) {
-    new Swiper(portfolioSlider, {
+    const portfolioInstance = new Swiper(portfolioSlider, {
       modules: [Scrollbar],
       slidesPerView: 1,
       spaceBetween: 30,
@@ -22,10 +22,11 @@ function sliders() {
         },
       },
     });
+    portfolioInstance.init();
   }
   const projectsSlider = document.querySelector('.other-projects');
   if (projectsSlider) {
-    new Swiper(projectsSlider, {
+    const projectsInstance = new Swiper(projectsSlider, {
       modules: [Scrollbar],
       slidesPerView: 1,
       spaceBetween: 30,
@@ -42,6 +43,7 @@ function sliders() {
         },
       },
     });
+    projectsInstance.init();
   }
 
   const careerSlider = document.querySelector('.js-career-slider');
@@ -86,6 +88,7 @@ function sliders() {
         },
       },
     });
+    aboutSliderInstance.init();
   }
 
   const aboutGallery = document.querySelector('.js-about-gallery');
@@ -106,7 +109,7 @@ function sliders() {
 
   const reviewsSlider = document.querySelector('.js-reviews-slider');
   if (reviewsSlider) {
-    new Swiper(reviewsSlider, {
+    const reviewSliderInstance = new Swiper(reviewsSlider, {
       modules: [Scrollbar],
       slidesPerView: 1,
       scrollbar: {
@@ -120,10 +123,11 @@ function sliders() {
         },
       },
     });
+    reviewSliderInstance.init();
   }
   const newsSlider = document.querySelector('.js-news-slider');
   if (newsSlider) {
-    new Swiper(newsSlider, {
+    const newsSliderInstance = new Swiper(newsSlider, {
       modules: [Scrollbar],
       slidesPerView: 1,
       scrollbar: {
@@ -137,6 +141,7 @@ function sliders() {
         },
       },
     });
+    newsSliderInstance.init();
   }
 }
 

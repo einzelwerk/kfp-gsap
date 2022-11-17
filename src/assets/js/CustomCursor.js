@@ -1,16 +1,16 @@
-import {gsap} from 'gsap';
+import { gsap } from 'gsap';
 
 const cursorTarget = document.querySelector('.js-portfolio-slider');
 const customCursor = document.querySelector('.custom-cursor');
 
 if (cursorTarget) {
-  cursorTarget.addEventListener('mouseover', e => {
+  cursorTarget.addEventListener('mouseover', () => {
     gsap.to(customCursor, {
       scale: 1,
       opacity: 1,
     });
   });
-  cursorTarget.addEventListener('mousemove', e => {
+  cursorTarget.addEventListener('mousemove', (e) => {
     gsap.to(customCursor, {
       css: {
         left: e.clientX,
@@ -18,7 +18,7 @@ if (cursorTarget) {
       },
     });
   });
-  cursorTarget.addEventListener('mouseout', e => {
+  cursorTarget.addEventListener('mouseout', () => {
     gsap.to(customCursor, {
       scale: 0,
       opacity: 0,

@@ -5,8 +5,9 @@ class Nav {
     this.state = false;
     this.listener();
   }
+
   listener() {
-    document.addEventListener('click', e => {
+    document.addEventListener('click', (e) => {
       if (this.state && this.btn.contains(e.target)) {
         this.closeNav();
       } else if (!this.state && this.btn.contains(e.target)) {
@@ -14,6 +15,7 @@ class Nav {
       }
     });
   }
+
   openNav() {
     this.state = true;
     this.menu.classList.add('opened');
@@ -21,6 +23,7 @@ class Nav {
     this.btn.setAttribute('aria-expanded', true);
     this.btn.setAttribute('aria-label', 'Menü schließen');
   }
+
   closeNav() {
     this.state = false;
     this.menu.classList.remove('opened');
@@ -30,4 +33,8 @@ class Nav {
   }
 }
 
-new Nav(document.querySelector('.mobile-menu-btn'), document.querySelector('#nav'));
+(() =>
+  new Nav(
+    document.querySelector('.mobile-menu-btn'),
+    document.querySelector('#nav')
+  ))();

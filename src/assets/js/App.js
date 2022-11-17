@@ -5,3 +5,4 @@ import './SmoothScroll';
 import './Animations';
 import './CustomCursor';
 import './Nav';
+import './OnLoad';
