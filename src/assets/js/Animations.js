@@ -4,22 +4,16 @@ import SplitText from 'gsap/SplitText';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import breakpoints from './MatchMedia';
 
-gsap.registerPlugin(SplitText, ScrollTrigger, CustomEase);
+gsap.registerPlugin(SplitText, ScrollTrigger, CustomEase, matchMedia);
 
 const globalGap = parseInt(
   getComputedStyle(document.body).getPropertyValue('--gap'),
   10
 );
 
-const textSplit = new SplitText('.hero__title', {
-  type: 'chars, lines',
-  charsClass: 'oh',
-  linesClass: 'oh',
-});
+const mm = gsap.matchMedia();
 
-const { chars } = textSplit;
-
-function chronology() {
+function aboutChonologySliderAnimation() {
   const aboutSliderItem = document.querySelector('.about-slider__slide');
   if (!aboutSliderItem) return;
   const tl = gsap.timeline({
@@ -35,48 +29,56 @@ function chronology() {
   });
 }
 function animationAfterLoaded() {
-  if (window.matchMedia(breakpoints.isDesktop)) return;
-  const h1Split = new SplitText('h1', {
-    type: 'chars, lines',
-    charsClass: 'oh',
-    linesClass: 'oh',
-  });
-  const heroContent = document.querySelector('.hero__content');
-  const tl = gsap.timeline();
+  mm.add(breakpoints.isDesktop, () => {
+    const textSplit = new SplitText('.hero__title', {
+      type: 'chars, lines',
+      charsClass: 'oh',
+      linesClass: 'oh',
+    });
 
-  tl.fromTo(
-    heroContent,
-    {
-      backgroundSize: '140%',
-      backgroundPosition: 'top center',
-    },
-    {
-      duration: 1,
-      backgroundSize: '120%',
-    },
-    '='
-  );
-  tl.fromTo(
-    chars,
-    {
-      y: 100,
-    },
-    {
-      stagger: 0.01,
-      y: 0,
-    }
-  );
-  tl.fromTo(
-    h1Split.chars,
-    {
-      y: 100,
-    },
-    {
-      stagger: 0.01,
-      y: 0,
-    },
-    '<'
-  );
+    const { chars } = textSplit;
+    const h1Split = new SplitText('h1', {
+      type: 'chars, lines',
+      charsClass: 'oh',
+      linesClass: 'oh',
+    });
+    const heroContent = document.querySelector('.hero__content');
+    const tl = gsap.timeline();
+
+    tl.fromTo(
+      heroContent,
+      {
+        backgroundSize: '140%',
+        backgroundPosition: 'top center',
+      },
+      {
+        duration: 1,
+        backgroundSize: '120%',
+      },
+      '='
+    );
+    tl.fromTo(
+      chars,
+      {
+        y: 100,
+      },
+      {
+        stagger: 0.01,
+        y: 0,
+      }
+    );
+    tl.fromTo(
+      h1Split.chars,
+      {
+        y: 100,
+      },
+      {
+        stagger: 0.01,
+        y: 0,
+      },
+      '<'
+    );
+  });
 }
 
 function textAnimation() {
@@ -134,12 +136,11 @@ function onLoadAnimation() {
     scrollTrigger: {
       trigger: '.hero__content',
       start: 'top top',
-      end: '70%',
-      scrub: true,
+      end: '100%',
+      scrub: 2,
     },
   });
   tl.to('.hero__content', {
-    ease: 'Power.2',
     backgroundPositionY: '100%',
   });
 }
@@ -192,7 +193,7 @@ function servicesSticky() {
 window.addEventListener('load', () => {
   Preloader();
   onLoadAnimation();
-  chronology();
+  aboutChonologySliderAnimation();
   textAnimation();
   if (window.matchMedia(breakpoints.isDesktop).matches) {
     servicesSticky();
