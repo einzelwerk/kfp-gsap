@@ -82,8 +82,21 @@ function animationAfterLoaded() {
 }
 
 function textAnimation() {
+  const targetArr = [
+    'p',
+    '.news-item__title',
+    '.services-list__title-desc',
+    '.editor-content h1',
+    '.editor-content h2',
+    '.editor-content h3',
+    '.editor-content h4',
+    '.editor-content h5',
+    '.editor-content h6',
+    '.editor-content  li',
+  ];
+
   const titles = document.querySelectorAll('.section-heading__title');
-  const plainText = document.querySelectorAll('p , .news-item__title');
+  const plainText = document.querySelectorAll(String(targetArr));
   titles.forEach((title) => {
     const headingSplit = new SplitText(title, {
       type: 'chars, lines',
@@ -175,7 +188,7 @@ function Preloader() {
 const sidebarHeight = document
   .querySelector('.project-content__sidebar')
   ?.getBoundingClientRect().height;
-function servicesSticky() {
+function stickyBlocks() {
   const contentHeight = document.querySelector(
     '.project-content__gallery'
   )?.offsetHeight;
@@ -196,6 +209,6 @@ window.addEventListener('load', () => {
   aboutChonologySliderAnimation();
   textAnimation();
   if (window.matchMedia(breakpoints.isDesktop).matches) {
-    servicesSticky();
+    stickyBlocks();
   }
 });

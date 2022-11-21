@@ -86,7 +86,10 @@ img {
     padding-bottom: var(--gap-y);
   }
   &--border-top {
-    border: 1px solid var(--gray-200);
+    border-top: 1px solid var(--gray-200);
+  }
+  &--border-bot {
+    border-bottom: 1px solid var(--gray-200);
   }
   &--margin {
     border-radius: 20px;

@@ -1,0 +1,108 @@
+@use '../utils/mixins' as *;
+
+.policy {
+  padding-bottom: 80px;
+  border-bottom: 1px solid var(--gray-200);
+  @include media(md) {
+    padding-bottom: 48px;
+  }
+  &__back {
+    display: flex;
+    align-items: center;
+    color:var(--gray-500);
+    margin-bottom: 48px;
+    &:hover {
+      svg {
+        transform: translateX(-5px);
+      }
+    }
+    @include media(md) {
+      margin-bottom: 24px;
+    }
+    svg {
+      transition: .5s;
+      margin-right: 12px;
+    }
+  }
+  
+}
+
+.policy-block {
+  display: flex;
+  align-items: flex-start;
+  @include media(md) {
+    flex-direction: column;
+  }
+}
+
+.policy-cta {
+  padding: var(--gap);
+  background: var(--gray-100);
+  border-radius: 16px;
+  margin-left: 103px;
+  width: 400px;
+  flex:none;
+  display: flex;
+  flex-direction: column;
+  @include media(md) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 48px;
+  }
+  &__title {
+    font-size: 24px;
+    margin-bottom: 16px;
+    line-height: 130%;
+  }
+  &__desc {
+    color:var(--gray-500);
+    line-height: 140%;
+    margin-bottom: 32px;
+    @include media(md) {
+      margin-bottom: 24px;
+    }
+  }
+  &__btn {
+    padding: 15px 32px;
+    align-self: flex-start;
+  }
+}
+
+.policy-content {
+  h2 {
+    font-size: 32px;
+    margin-bottom: 48px;
+    @include media(md) {
+      font-size: 28px;
+      margin-bottom: 36px;
+    }
+  }
+  dl {
+    margin-bottom: 48px;
+    @include media(md) {
+     margin-bottom: 36px;
+    }
+    &:last-child {
+      margin: 0;
+    }
+  }
+  dt {
+    font-size: 24px;
+    margin-bottom: 16px;
+    
+    &:last-child {
+      margin-bottom: 48px;
+    }
+  }
+  dd {
+    font-size: 18px;
+    line-height: 140%;
+    color:var(--gray-500)
+  }
+  .small {
+    dt {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+  }
+}

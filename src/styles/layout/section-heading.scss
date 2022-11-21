@@ -16,8 +16,8 @@
   }
   &__title {
     font-size: 40px;
-    line-height: 120%;
-    max-width: 620px;
+    line-height: 1.1;
+    max-width: 700px;
 
     @include media(sm) {
       font-size: 30px;

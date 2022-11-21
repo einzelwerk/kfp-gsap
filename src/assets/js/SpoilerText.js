@@ -12,6 +12,7 @@ if (showTextBtn) {
   });
   t.from(text, {
     height: 0,
+    display: 'none',
   });
   showTextBtn.addEventListener('click', () => {
     if (t.reversed()) {
@@ -19,6 +20,7 @@ if (showTextBtn) {
     } else {
       t.reverse();
     }
+    showTextBtn.classList.toggle('opened');
     const textContent = showTextBtn.querySelector('span').dataset.switchText;
     showTextBtn.querySelector('span').dataset.switchText =
       showTextBtn.querySelector('span').innerText;

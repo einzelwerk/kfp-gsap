@@ -1,27 +1,37 @@
 import { gsap } from 'gsap';
 
-const cursorTarget = document.querySelector('.js-portfolio-slider');
 const customCursor = document.querySelector('.custom-cursor');
+const cursorTarget = document.querySelectorAll('.show-cursor');
+gsap.set(customCursor, {
+  xPercent: -50,
+  yPercent: -50,
+});
 
-if (cursorTarget) {
-  cursorTarget.addEventListener('mouseover', () => {
-    gsap.to(customCursor, {
-      scale: 1,
-      opacity: 1,
-    });
-  });
-  cursorTarget.addEventListener('mousemove', (e) => {
-    gsap.to(customCursor, {
-      css: {
-        left: e.clientX,
-        top: e.clientY,
-      },
-    });
-  });
-  cursorTarget.addEventListener('mouseout', () => {
-    gsap.to(customCursor, {
-      scale: 0,
-      opacity: 0,
-    });
+function moveCursor(e) {
+  gsap.to(customCursor, {
+    duration: 0.5,
+    x: e.clientX,
+    y: e.clientY,
   });
 }
+
+function enterCursor() {
+  gsap.to(customCursor, {
+    duration: 0.5,
+    scale: 1,
+    opacity: 1,
+  });
+}
+function leaveCursor() {
+  gsap.to(customCursor, {
+    duration: 0.5,
+    scale: 0,
+    opacity: 0,
+  });
+}
+
+cursorTarget.forEach((target) => {
+  target.addEventListener('mouseenter', enterCursor);
+  target.addEventListener('mouseleave', leaveCursor);
+  target.addEventListener('pointermove', moveCursor);
+});
