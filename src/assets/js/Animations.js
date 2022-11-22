@@ -95,7 +95,9 @@ function textAnimation() {
     '.editor-content  li',
   ];
 
-  const titles = document.querySelectorAll('.section-heading__title');
+  const titles = document.querySelectorAll(
+    '.section-heading__title, .services-list__title'
+  );
   const plainText = document.querySelectorAll(String(targetArr));
   titles.forEach((title) => {
     const headingSplit = new SplitText(title, {
@@ -136,7 +138,6 @@ function textAnimation() {
         opacity: 0,
       },
       {
-        delay: 1,
         y: 0,
         opacity: 1,
       }
@@ -185,6 +186,58 @@ function Preloader() {
   }, 500);
 }
 
+function servicesGridAnimation() {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.services-grid',
+      start: 'top center',
+    },
+  });
+
+  tl.fromTo(
+    '.services-grid__item',
+    {
+      opacity: 0,
+      scale: 0,
+    },
+    {
+      stagger: {
+        each: 0.1,
+        from: [0, 0],
+        grid: 'auto',
+      },
+      opacity: 1,
+      scale: 1,
+    }
+  );
+}
+
+function partnersAnimation() {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.partners-list',
+      start: 'top center',
+    },
+  });
+
+  tl.fromTo(
+    '.partners-list__item',
+    {
+      opacity: 0,
+      scale: 0,
+    },
+    {
+      stagger: {
+        each: 0.1,
+        from: [0, 0],
+        grid: 'auto',
+      },
+      opacity: 1,
+      scale: 1,
+    }
+  );
+}
+
 const sidebarHeight = document
   .querySelector('.project-content__sidebar')
   ?.getBoundingClientRect().height;
@@ -208,6 +261,8 @@ window.addEventListener('load', () => {
   onLoadAnimation();
   aboutChonologySliderAnimation();
   textAnimation();
+  servicesGridAnimation();
+  partnersAnimation();
   if (window.matchMedia(breakpoints.isDesktop).matches) {
     stickyBlocks();
   }

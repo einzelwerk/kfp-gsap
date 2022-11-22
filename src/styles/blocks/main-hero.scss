@@ -54,6 +54,7 @@
     position: absolute;
     bottom: var(--gap);
     left: var(--gap);
+    line-height: .9;
     @include media(md) {
       font-size: 50px;
     }

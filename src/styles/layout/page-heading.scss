@@ -9,6 +9,7 @@
   &__title {
     font-size: 52px;
     max-width: 1103px;
+    line-height: 1;
     @include media(md) {
       font-size: 36px;
 
