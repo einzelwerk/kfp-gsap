@@ -9,10 +9,6 @@ const smoother = ScrollSmoother.create({
   smoothTouch: 0.1,
 });
 
-smoother.effects('img', {
-  speed: 'auto',
-});
-
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
