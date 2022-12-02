@@ -1,26 +1,26 @@
-const webpack = require('webpack');
-const path = require('path');
-const fs = require('fs');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const webpack = require("webpack");
+const path = require("path");
+const fs = require("fs");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const SpriteLoaderPlugin = require("svg-sprite-loader/plugin");
 
-const pagesDir = './src/pug/pages';
+const pagesDir = "./src/pug/pages";
 const filenames = fs.readdirSync(pagesDir);
-const ESLintPlugin = require('eslint-webpack-plugin');
+const ESLintPlugin = require("eslint-webpack-plugin");
 
-const isProd = process.env.NODE_ENV == 'production';
+const isProd = process.env.NODE_ENV == "production";
 const isDev = !isProd;
 
 console.log(process.env.NODE_ENV);
 
 module.exports = {
   mode: isDev,
-  devtool: isDev ? 'source-map' : false,
+  devtool: isDev ? "source-map" : false,
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, "dist"),
     },
     historyApiFallback: true,
     open: true,
@@ -29,22 +29,18 @@ module.exports = {
     port: 8080,
   },
   entry: {
-    main: path.resolve(__dirname, './src/index.js'),
+    main: path.resolve(__dirname, "./src/index.js"),
   },
   resolve: {
     alias: {
-      '@': path.join(__dirname, './src/assets/'),
+      "@": path.join(__dirname, "./src/assets/"),
     },
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'assets/[name].js',
+    path: path.resolve(__dirname, "./dist"),
+    filename: "assets/[name].js",
     assetModuleFilename: (pathData) => {
-      const filepath = path
-        .dirname(pathData.filename)
-        .split('/')
-        .slice(1)
-        .join('/');
+      const filepath = path.dirname(pathData.filename).split("/").slice(1).join("/");
       return `${filepath}/[name][ext][query]`;
     },
   },
@@ -60,14 +56,14 @@ module.exports = {
     new ESLintPlugin(),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'assets/css/[name].css',
+      filename: "assets/css/[name].css",
     }),
     new webpack.HotModuleReplacementPlugin(),
     new SpriteLoaderPlugin({
       plainSprite: true,
       spriteAttrs: {
-        fill: '#fff',
-        class: 'svg-icon',
+        fill: "#fff",
+        class: "svg-icon",
       },
     }),
   ],
@@ -77,7 +73,7 @@ module.exports = {
         test: /\.pug$/,
         use: [
           {
-            loader: 'pug-loader',
+            loader: "pug-loader",
             options: {
               pretty: true,
             },
@@ -87,37 +83,37 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: ["babel-loader"],
       },
       {
         test: /\.(png|jpe?g|svg|gif|ico)$/,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
       {
-        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-        type: 'asset/inline',
+        test: /\.(woff(2)?|eot|ttf|otf|)$/,
+        type: "asset/resource",
       },
       {
         test: /\.(scss|css)$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               sourceMap: true,
             },
           },
           {
-            loader: 'postcss-loader',
+            loader: "postcss-loader",
             options: {
               sourceMap: true,
               postcssOptions: {
-                plugins: [require('autoprefixer')],
+                plugins: [require("autoprefixer")],
               },
             },
           },
           {
-            loader: 'sass-loader',
+            loader: "sass-loader",
             options: {
               sourceMap: true,
             },
@@ -130,10 +126,10 @@ module.exports = {
         include: /.*_sprite\.svg/,
         use: [
           {
-            loader: 'svg-sprite-loader',
+            loader: "svg-sprite-loader",
             options: {
               extract: true,
-              spriteFilename: 'sprite.svg',
+              spriteFilename: "sprite.svg",
               runtimeCompat: true,
             },
           },
