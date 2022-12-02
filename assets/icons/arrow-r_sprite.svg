@@ -1,0 +1,8 @@
+export default {
+      id: "arrow-r_sprite-usage",
+      viewBox: "0 0 10 18",
+      url: __webpack_public_path__ + "C:\\Users\\user\\Desktop\\work\\KFP\\src\\assets\\icons\\arrow-r_sprite.svg",
+      toString: function () {
+        return this.url;
+      }
+    }
