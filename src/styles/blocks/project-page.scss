@@ -16,18 +16,21 @@
 	&__item {
 		border-radius: 20px;
 		overflow: hidden;
-		&:first-child {
+
+		&--big-x {
 			grid-column: span 2;
-		}
-		&:nth-child(4) {
-			grid-column: span 2;
-		}
-		&--big {
-			grid-row: span 2;
 			@include media(md) {
-				grid-column: span 2;
+				grid-column: auto;
 			}
 		}
+
+		&--big-y {
+			grid-row: span 2;
+			@include media(md) {
+				grid-row: auto;
+			}
+		}
+
 		img {
 			width: 100%;
 			height: 100%;
@@ -81,8 +84,6 @@
 		p {
 			margin-bottom: 1rem;
 			overflow: hidden;
-			&:not(:first-child) {
-			}
 		}
 	}
 	&__more {

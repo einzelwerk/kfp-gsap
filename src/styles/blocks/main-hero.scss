@@ -1,77 +1,77 @@
 @use '../utils/mixins' as *;
 
 .hero-section {
-  padding: 0 var(--gap);
-  margin-top: var(--gap);
+	padding: 0 var(--gap);
+	margin-top: var(--gap);
 }
 
 .hero {
-  height: 0;
-  width: 100%;
-  padding-bottom: calc(740px / 1360px * 100%);
-  position: relative;
-  @include media(sm) {
-    padding-bottom: calc(440px / 328px * 100%);
-  }
-  &--small {
-    padding-bottom: calc(640px / 1360px * 100%);
-    @include media(sm) {
-      padding-bottom: calc(260px / 328px * 100%);
-    }
-  }
-  &--tiny {
-    padding-bottom: calc(500px / 1360px * 100%);
-    @include media(sm) {
-      padding-bottom: calc(360px / 328px * 100%);
-    }
-  }
-  &--top-gap {
-    margin-top: 64px;
-    @include media(sm) {
-      margin-top: 40px;
-    }
-  }
-  &__content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: 140%;
-    border-radius: 20px;
-    overflow: hidden;
-    background-position: top center;
-    @include media(md) {
-      background-size: cover;
-    }
-  }
-  &__title {
-    color: var(--text-on-accent);
-    font-size: 80px;
-    line-height: 100%;
-    max-width: 1000px;
-    position: absolute;
-    bottom: var(--gap);
-    left: var(--gap);
-    line-height: .9;
-    @include media(md) {
-      font-size: 50px;
-    }
+	height: 0;
+	width: 100%;
+	padding-bottom: calc(740px / 1360px * 100%);
+	position: relative;
+	@include media(sm) {
+		padding-bottom: calc(1920px / 1080px * 100%);
+	}
+	&--small {
+		padding-bottom: calc(640px / 1360px * 100%);
+		@include media(sm) {
+			padding-bottom: calc(260px / 328px * 100%);
+		}
+	}
+	&--tiny {
+		padding-bottom: calc(500px / 1360px * 100%);
+		@include media(sm) {
+			padding-bottom: calc(360px / 328px * 100%);
+		}
+	}
+	&--top-gap {
+		margin-top: 64px;
+		@include media(sm) {
+			margin-top: 40px;
+		}
+	}
+	&__content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: 140%;
+		border-radius: 20px;
+		overflow: hidden;
+		background-position: top center;
+		@include media(md) {
+			background-size: cover;
+		}
+	}
+	&__title {
+		color: var(--text-on-accent);
+		font-size: 80px;
+		line-height: 100%;
+		max-width: 1000px;
+		position: absolute;
+		bottom: var(--gap);
+		left: var(--gap);
+		line-height: 0.9;
+		@include media(md) {
+			font-size: 50px;
+		}
 
-    @include media(sm) {
-      font-size: 36px;
-    }
-  }
-  &__back-btn {
-    position: absolute;
-    top: var(--gap);
-    left: var(--gap);
-    padding: 14px 30px;
-    background: var(--background);
-    border-radius: 1000px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+		@include media(sm) {
+			font-size: 36px;
+		}
+	}
+	&__back-btn {
+		position: absolute;
+		top: var(--gap);
+		left: var(--gap);
+		padding: 14px 30px;
+		background: var(--background);
+		border-radius: 1000px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 }
