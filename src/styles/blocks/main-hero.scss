@@ -11,7 +11,7 @@
 	padding-bottom: calc(740px / 1360px * 100%);
 	position: relative;
 	@include media(sm) {
-		padding-bottom: calc(1920px / 1080px * 100%);
+		padding-bottom: 56.25%;
 	}
 	&--small {
 		padding-bottom: calc(640px / 1360px * 100%);
@@ -60,7 +60,7 @@
 		}
 
 		@include media(sm) {
-			font-size: 36px;
+			font-size: 1.3rem;
 		}
 	}
 	&__back-btn {
