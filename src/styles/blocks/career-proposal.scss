@@ -1,165 +1,169 @@
 @use '../utils/mixins' as *;
 
 .career-proposal {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 105px;
-  @include media(md) {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  &__title {
-    font-size: 40px;
-    margin-bottom: 80px;
-    @include media(md) {
-      font-size: 30px;
-      margin-bottom: 40px;
-    }
-  }
-  &__item {
-    &--checkbox {
-      margin: 40px 0;
-      display: block;
-      @include media(md) {
-        margin: 32px 0;
-      }
-    }
-  }
-  &__grid-field {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    @include media(md) {
-      grid-template-columns: 1fr;
-    }
-    &.career-proposal__grid-field--secondary {
-      .career-proposal__item {
-        &:nth-child(n + 5) {
-          grid-column: span 2 !important;
-          @include media(md) {
-            grid-column: auto !important;
-          }
-        }
-        &:nth-child(3n) {
-          grid-column: auto;
-        }
-      }
-    }
-  }
-  &__grid-field &__item {
-    &:nth-child(3n) {
-      grid-column: span 2;
-      @include media(md) {
-       grid-column: auto;
-      }
-    }
-  }
-  &__grid-field &__input,
-  &__grid-field &__file-placeholder {
-    width: 100%;
-    padding-bottom: 24px;
-    border-bottom: 1px solid var(--gray-200);
-    display: block;
-    &--valid-error {
-      border-color: red !important;
-      &::placeholder {
-        color: red !important;
-      }
-    }
-    &:hover {
-      border-color: var(--gray-400);
-    }
-    &:focus {
-      outline: none;
-      border-color: var(--accent-color);
-    }
-    &::placeholder {
-      color: var(--gray-400);
-      font-size: 18px;
-    }
-  }
-  &__textarea {
-    height: 120px;
-  }
-  &__grid-field &__file-placeholder {
-    color: var(--gray-400);
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-  }
-  &__file {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-    &:focus ~ .career-proposal__file-placeholder {
-      border-color: var(--accent-color);
-    }
-  }
-  &__checkbox {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-    &:checked {
-      ~ .career-proposal__checkbox-text {
-        &:before {
-          background-image: url('@/images/check.svg');
-        }
-      }
-    }
-    &:focus ~ .career-proposal__checkbox-text {
-      &:before {
-        border-color: var(--accent-color);
-      }
-    }
-  }
-  &__checkbox-text {
-    cursor: pointer;
-    display: flex;
-    &:before {
-      content: '';
-      width: 20px;
-      height: 20px;
-      border: 1px solid var(--gray-300);
-      display: inline-block;
-      vertical-align: bottom;
-      margin-right: 12px;
-      background-repeat: no-repeat;
-      background-size: 9px 6px;
-      background-position: center center;
-    }
-  }
-  &__link {
-    color: var(--gray-400);
-  }
-  &__submit {
-    padding: 20px 48px;
-    font-size: 18px;
-  }
-  &__image {
-    @include media(md) {
-      grid-row: 1;
-    }
-  }
-  &__image-src {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-  }
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 105px;
+	@include media(md) {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+	&__title {
+		font-size: 40px;
+		margin-bottom: 80px;
+		@include media(md) {
+			font-size: 30px;
+			margin-bottom: 40px;
+		}
+	}
+	&__item {
+		&--checkbox {
+			margin: 40px 0;
+			display: block;
+			@include media(md) {
+				margin: 32px 0;
+			}
+		}
+	}
+	&__grid-field {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 40px;
+		@include media(md) {
+			grid-template-columns: 1fr;
+		}
+		&.career-proposal__grid-field--secondary {
+			.career-proposal__item {
+				&:nth-child(n + 5) {
+					grid-column: span 2 !important;
+					@include media(md) {
+						grid-column: auto !important;
+					}
+				}
+				&:nth-child(3n) {
+					grid-column: auto;
+				}
+			}
+		}
+	}
+	&__grid-field &__item {
+		&:nth-child(3n) {
+			grid-column: span 2;
+			@include media(md) {
+				grid-column: auto;
+			}
+		}
+	}
+	&__grid-field &__input,
+	&__grid-field &__file-placeholder {
+		width: 100%;
+		padding-bottom: 24px;
+		border-bottom: 1px solid var(--gray-200);
+		display: block;
+		&--valid-error {
+			border-color: red !important;
+			~ &__file-placeholder {
+				border-color: red !important;
+				color: red !important;
+			}
+			&::placeholder {
+				color: red !important;
+			}
+		}
+		&:hover {
+			border-color: var(--gray-400);
+		}
+		&:focus {
+			outline: none;
+			border-color: var(--accent-color);
+		}
+		&::placeholder {
+			color: var(--gray-400);
+			font-size: 18px;
+		}
+	}
+	&__textarea {
+		height: 120px;
+	}
+	&__grid-field &__file-placeholder {
+		color: var(--gray-400);
+		font-size: 18px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		cursor: pointer;
+	}
+	&__file {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		border: 0;
+		padding: 0;
+		white-space: nowrap;
+		clip-path: inset(100%);
+		clip: rect(0 0 0 0);
+		overflow: hidden;
+		&:focus ~ .career-proposal__file-placeholder {
+			border-color: var(--accent-color);
+		}
+	}
+	&__checkbox {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		border: 0;
+		padding: 0;
+		white-space: nowrap;
+		clip-path: inset(100%);
+		clip: rect(0 0 0 0);
+		overflow: hidden;
+		&:checked {
+			~ .career-proposal__checkbox-text {
+				&:before {
+					background-image: url('@/images/check.svg');
+				}
+			}
+		}
+		&:focus ~ .career-proposal__checkbox-text {
+			&:before {
+				border-color: var(--accent-color);
+			}
+		}
+	}
+	&__checkbox-text {
+		cursor: pointer;
+		display: flex;
+		&:before {
+			content: '';
+			width: 20px;
+			height: 20px;
+			border: 1px solid var(--gray-300);
+			display: inline-block;
+			vertical-align: bottom;
+			margin-right: 12px;
+			background-repeat: no-repeat;
+			background-size: 9px 6px;
+			background-position: center center;
+		}
+	}
+	&__link {
+		color: var(--gray-400);
+	}
+	&__submit {
+		padding: 20px 48px;
+		font-size: 18px;
+	}
+	&__image {
+		@include media(md) {
+			grid-row: 1;
+		}
+	}
+	&__image-src {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 20px;
+	}
 }
