@@ -1,19 +1,19 @@
 // vendor
-@use "vendor/reset";
+@use 'vendor/reset';
 // utils
-@use "utils/vars";
-@use "utils/mixins";
-@use "utils/fonts";
+@use 'utils/vars';
+@use 'utils/mixins';
+@use 'utils/fonts';
 // modules
-@use "modules/buttons";
-@use "modules/inputs";
-@use "modules/keyframes";
+@use 'modules/buttons';
+@use 'modules/inputs';
+@use 'modules/keyframes';
 
 // layout
-@use "layout/base";
-@use "layout/text";
-@use "layout/header";
-@use "layout/footer";
+@use 'layout/base';
+@use 'layout/text';
+@use 'layout/header';
+@use 'layout/footer';
 @use 'layout/section-heading';
 @use 'layout/page-heading';
 
@@ -50,3 +50,7 @@
 @use 'blocks/preloader';
 @use 'blocks/custom-cursor';
 @use 'blocks/policy';
+
+.main {
+	margin-top: -2rem;
+}
