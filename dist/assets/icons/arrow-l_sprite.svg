@@ -1,8 +1,0 @@
-export default {
-      id: "arrow-l_sprite-usage",
-      viewBox: "0 0 32 32",
-      url: __webpack_public_path__ + "C:\\projects\\kfp\\src\\assets\\icons\\arrow-l_sprite.svg",
-      toString: function () {
-        return this.url;
-      }
-    }
