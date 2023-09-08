@@ -257,8 +257,8 @@ function stickyBlocks() {
 }
 
 window.addEventListener('load', () => {
+	Preloader()
 	if (window.matchMedia(breakpoints.isDesktop).matches) {
-		Preloader()
 		onLoadAnimation()
 		aboutChonologySliderAnimation()
 		textAnimation()
