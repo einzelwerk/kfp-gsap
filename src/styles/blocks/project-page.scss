@@ -12,6 +12,9 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: var(--gap);
+		@include media(md) {
+			grid-auto-rows: minmax(min-content, 140px);
+		}
 	}
 	&__item {
 		border-radius: 20px;
