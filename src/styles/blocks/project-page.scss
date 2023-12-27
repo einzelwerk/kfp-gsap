@@ -13,6 +13,8 @@
 		grid-template-columns: 1fr 1fr;
 		gap: var(--gap);
 		@include media(md) {
+			width: 100%;
+			grid-template-columns: 1fr;
 			grid-auto-rows: minmax(min-content, 140px);
 		}
 	}
